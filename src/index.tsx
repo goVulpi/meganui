@@ -1,23 +1,26 @@
-/**
- * @class ExampleComponent
- */
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import Button from './Button';
+import Heading from './Heading';
 
-import * as React from 'react'
+// export Button and Heading as named exports
+export { Button, Heading }
 
-import styles from './styles.css'
+// alternative, more concise syntax for named exports
+// export { default as Foo } from './Foo'
 
-export type Props = { text: string }
+// set a default export for this module
+export default { Button, Heading }
 
-export default class ExampleComponent extends React.Component<Props> {
-  render() {
-    const {
-      text
-    } = this.props
+if ("development" === process.env.NODE_ENV) {
 
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
+    const a11y = require("react-a11y").default;
+    a11y(React, ReactDOM, {
+      rules: {
+        "img-uses-alt": "warn",
+        "redundant-alt": [
+          "warn", ["Image"]
+        ]
+      }
+    });
   }
-}

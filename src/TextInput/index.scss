@@ -1,0 +1,57 @@
+@import '../index.scss';
+
+@mixin text-input-state($color) {
+    border-color: lighten($color, 5%);
+    &:hover, &:focus {
+        border-color: darken($color, 5%);
+    }
+}
+
+@mixin placeholder($color) {
+    &::placeholder {
+        color: $color;
+        transition: var(--transition-base);
+    }
+}
+
+.text-input {
+    background: $white;
+    border: var(--border-width) solid $gray6;
+    border-radius: calc(var(--layout-base)*4);
+    font-size: .75rem;
+    font-family: var(--general-font);
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    padding: .3125rem .75rem;
+    transition: var(--transition-base);
+    width: 100%;
+    @include placeholder($gray6);
+    &:hover, &:focus {
+        @include placeholder($gray5);
+    }
+    &:hover {
+        border-color: $gray6;
+    }
+    &:focus {
+        border-color: $blue;
+        outline: 0 none;
+    }
+    &.big {
+        padding: .4375rem 1rem .5rem;
+        font-size: .875rem;
+    }
+    &.bigger {
+        padding: .625rem 1.25rem;
+        font-size: 1rem;
+    }
+    &.biggest {
+        padding: .6875rem 1.5rem;
+        font-size: 1.25rem;
+    }
+    &.success {
+        @include text-input-state($green);
+    }
+    &.error {
+        @include text-input-state($red);
+    }
+}

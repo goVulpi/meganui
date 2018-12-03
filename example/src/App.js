@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-
-import ExampleComponent from 'meganui'
+import React, { Component } from 'react';
+import { Button, Heading } from 'meganui';
 
 export default class App extends Component {
   render () {
     return (
       <div>
-        <ExampleComponent text='Modern React component module' />
+        <Button>Oi</Button>
+        <Heading>Hello</Heading>
       </div>
     )
   }

@@ -1,0 +1,46 @@
+@import '../index.scss';
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif, initial;
+    font-weight: bold;
+    color: $gray1;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: calc(var(--layout-base)*8);
+    margin: 0 0 1rem 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: calc(var(--layout-base)*7);
+    margin: 0 0 1rem 0;
+}
+
+h3 {
+    font-size: 2rem;
+    line-height: calc(var(--layout-base)*6);
+    margin: 0 0 1rem 0;
+}
+
+h4 {
+    font-size: 1.5rem;
+    line-height: calc(var(--layout-base)*5);
+    margin: 0 0 .5rem 0;
+}
+
+h5 {
+    font-size: 1.25rem;
+    line-height: calc(var(--layout-base)*4);
+    margin: 0 0 .5rem 0;
+}
+
+h6 {
+    font-size: 1rem;
+    line-height: calc(var(--layout-base)*3);
+    margin: 0 0 .5rem 0;
+}
+
+/* TODO: set font-sizes for h1-6 */
