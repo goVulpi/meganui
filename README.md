@@ -42,4 +42,4 @@ https://github.com/goVulpi/taylorops/tree/master/gitflow_standards
 
 #### Install Node Dependencies
 
-To configure this project in a new environment, you first need to run `npm install`.
+To configure this project in a new environment, you first need to run `npm install` on root directory.
