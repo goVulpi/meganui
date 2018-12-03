@@ -24,3 +24,18 @@ export default class Heading extends React.Component<Props> {
     }
 
 }
+
+/*
+TODO: bring it back to Component
+
+Heading.displayName = "Heading";
+
+Heading.defaultProps = {
+    level: 1
+};
+
+Heading.propTypes = {
+    level: PropTypes.oneOf(['1', '2', '3', '4', '5', '6']).isRequired,
+};
+
+*/

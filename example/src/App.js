@@ -5,8 +5,8 @@ export default class App extends Component {
   render () {
     return (
       <div>
-        <Button>Oi</Button>
-        <Heading>Hello</Heading>
+        <Button color="primary">Oi</Button>
+        <Heading level={2}>Hello</Heading>
       </div>
     )
   }

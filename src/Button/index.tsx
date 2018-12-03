@@ -3,6 +3,8 @@
  */
 
 import * as React from 'react';
+import * as PropTypes from 'prop-types'
+import './index.scss';
 
 export type Props = {
     block: boolean,
@@ -16,6 +18,13 @@ export default class Button extends React.Component<Props> {
     constructor(props: any) {
         super(props);
     }
+
+    static propTypes = {
+        block: PropTypes.bool,
+        color: PropTypes.oneOf(["primary", "primary-variant", "secondary", "info", "danger", "dark", "success", "warning"]),
+        outlined: PropTypes.bool,
+        size: PropTypes.oneOf(["big", "bigger", "biggest"])
+    };
 
     getClassNames() : string {
         const { block, color, outlined, size } = this.props;
