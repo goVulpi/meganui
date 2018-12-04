@@ -31,9 +31,9 @@ export default {
     postcss({
       modules: true
     }),
+    sass(),
     url(),
     svgr(),
-    sass(),
     resolve(),
     typescript({
       rollupCommonJSResolveHack: true,

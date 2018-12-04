@@ -4,7 +4,7 @@
 
 import * as React from 'react';
 import * as PropTypes from 'prop-types'
-import './index.scss';
+import styles from './index.scss';
 
 export type Props = {
     block: boolean,
@@ -27,8 +27,9 @@ export default class Button extends React.Component<Props> {
     };
 
     getClassNames() : string {
+        console.log(styles.button);
         const { block, color, outlined, size } = this.props;
-        let classNames : string[] = ["button"];
+        let classNames : string[] = [styles.button];
 
         block ? classNames.push("block") : Function.prototype();
         outlined ? classNames.push("outlined") : Function.prototype();
