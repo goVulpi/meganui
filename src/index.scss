@@ -1,24 +1,4 @@
-$purple: #4e1d6d;
-$pink:   #d22365;
-$blue:   #00b3c8;
-
-$gray-scale-hue-base: 210;
-
-$black:  hsl(0, 0%, 0%);
-$gray1:  hsl($gray-scale-hue-base, 30%, 10%);
-$gray2:  hsl($gray-scale-hue-base, 30%, 20%);
-$gray3:  hsl($gray-scale-hue-base, 15%, 30%);
-$gray4:  hsl($gray-scale-hue-base, 15%, 40%);
-$gray5:  hsl($gray-scale-hue-base, 10%, 60%);
-$gray6:  hsl($gray-scale-hue-base, 10%, 80%);
-$gray7:  hsl($gray-scale-hue-base, 10%, 90%);
-$gray8:  hsl($gray-scale-hue-base, 10%, 96%);
-$gray9:  hsl($gray-scale-hue-base, 10%, 98%);
-$white:  hsl(0, 0%, 100%);
-
-$green:  #5abd67; 
-$yellow: #ff9a08;
-$red:    #f03030;
+@import './_vars.scss';
 
 :root {
   --border-width: 2px;
