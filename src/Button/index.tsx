@@ -27,14 +27,13 @@ export default class Button extends React.Component<Props> {
     };
 
     getClassNames() : string {
-        console.log(styles.button);
         const { block, color, outlined, size } = this.props;
-        let classNames : string[] = [styles.button];
+        let classNames : string[] = [styles["button"]];
 
-        block ? classNames.push("block") : Function.prototype();
-        outlined ? classNames.push("outlined") : Function.prototype();
-        (typeof color === "string") ? classNames.push(color) : Function.prototype();
-        (typeof size === "string") ? classNames.push(size) : Function.prototype();
+        block ? classNames.push(styles["block"]) : Function.prototype();
+        outlined ? classNames.push(styles["outlined"]) : Function.prototype();
+        (typeof color === "string") ? classNames.push(styles[color]) : Function.prototype();
+        (typeof size === "string") ? classNames.push(styles[size]) : Function.prototype();
 
         return classNames.join(" ");
     }

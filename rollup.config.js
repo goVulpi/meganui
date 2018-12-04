@@ -4,7 +4,7 @@ import external from 'rollup-plugin-peer-deps-external';
 // import postcss from 'rollup-plugin-postcss-modules'
 import postcss from 'rollup-plugin-postcss';
 import resolve from 'rollup-plugin-node-resolve';
-import sass from 'rollup-plugin-sass';
+import collectSass from 'rollup-plugin-collect-sass'
 import url from 'rollup-plugin-url';
 import svgr from '@svgr/rollup';
 
@@ -31,7 +31,13 @@ export default {
     postcss({
       modules: true
     }),
-    sass(),
+    collectSass(
+      {
+        importOnce: true,
+        include: ['src/**/*.sass'],
+        extract: 'index.css'
+      }
+    ),
     url(),
     svgr(),
     resolve(),
