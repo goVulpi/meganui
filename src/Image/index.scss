@@ -1,4 +1,4 @@
-@import '../index.scss';
+@import '../_vars.scss';
 :root {
     --thumbnail-height-base: 32px;
 }
@@ -7,7 +7,6 @@
     width: calc(var(--thumbnail-height-base)*#{$size});    
 }
 .image {
-    border-radius: 50%;
     display: inline-block;
     &.fluid {
         max-width: 100%;
@@ -24,5 +23,8 @@
         &.biggest {
             @include thumbnail-dimensions(4.5);
         }
+    }
+    &.avatar {
+        border-radius: 50%;
     }
 }
