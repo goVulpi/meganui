@@ -1,4 +1,4 @@
-@import './_vars.scss';
+@import '../_vars.scss';
 
 :root {
   --border-width: 2px;
@@ -24,10 +24,13 @@
   @include box-sizing(border-box);
 }
 
-body {
+body, .app-container {
   background: $gray9;
   color: $gray4;
   font-family: var(--general-font);
+}
+
+body {
   font-size: .875rem;
   line-height: 1.5;
 }
