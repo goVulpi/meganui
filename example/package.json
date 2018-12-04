@@ -5,16 +5,29 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "babel-preset-stage-0": "^6.24.1",
+    "meganui": "file:..",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-scripts": "^1.1.4",
-    "meganui": "file:.."
+    "react-scripts": "^1.1.4"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^4.0.11",
+    "@storybook/addon-links": "^4.0.11",
+    "@storybook/addons": "^4.0.11",
+    "@storybook/react": "^4.0.11",
+    "@types/storybook__react": "^4.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-runtime": "^6.26.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   }
 }
