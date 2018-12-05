@@ -5,11 +5,13 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "meganui": "file:..",
+    "node-sass": "^4.10.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "^1.1.4",
-    "meganui": "file:.."
+    "sass": "^1.15.1"
   },
   "scripts": {
     "start": "react-scripts start",
