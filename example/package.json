@@ -7,23 +7,22 @@
   "private": false,
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
+    "babel-loader": "^8.0.4",
     "babel-preset-stage-0": "^6.24.1",
     "babel-runtime": "^6.26.0",
     "@babel/core": "^7.2.0",
     "@storybook/addon-actions": "^4.0.11",
     "@storybook/addon-links": "^4.0.11",
     "@storybook/addons": "^4.0.11",
-    "@storybook/react": "^4.0.11",
-    "@types/storybook__react": "^4.0.0",
-    "node-sass": "^4.10.0"
+    "@storybook/react": "^4.0.11"
   },
   "dependencies": {
     "meganui": "file:..",
     "prop-types": "^15.6.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-scripts": "^1.1.4"
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts": "^2.1.1",
+    "node-sass": "^4.10.0"
   },
   "engines": {
     "node": ">=8",
@@ -43,5 +42,11 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
