@@ -1,37 +1,68 @@
 {
-  "name": "meganui-example",
-  "homepage": "https://goVulpi.github.io/meganui",
-  "version": "0.0.0",
+  "name": "meganui",
+  "version": "1.0.0",
+  "description": "Megan UI Component Library",
+  "author": "goVulpi",
   "license": "MIT",
-  "private": true,
-  "dependencies": {
-    "babel-preset-stage-0": "^6.24.1",
-    "meganui": "file:..",
-    "prop-types": "^15.6.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-scripts": "^1.1.4"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.2.0",
-    "@storybook/addon-actions": "^4.0.11",
-    "@storybook/addon-links": "^4.0.11",
-    "@storybook/addons": "^4.0.11",
-    "@storybook/react": "^4.0.11",
-    "@storybook/storybook-deployer": "^2.8.1",
-    "@types/storybook__react": "^4.0.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-runtime": "^6.26.0"
+  "repository": "goVulpi/meganui",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
-    "export-storybook": "build-storybook -c .storybook -o .out",
-    "deploy-storybook": "storybook-to-ghpages"
+    "test": "cross-env CI=1 react-scripts-ts test --env=jsdom",
+    "test:watch": "react-scripts-ts test --env=jsdom",
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "prepare": "npm run build",
+    "predeploy": "cd example && npm install && npm run build",
+    "deploy": "gh-pages -d example/build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.5.4",
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0"
+  },
+  "devDependencies": {
+    "@svgr/rollup": "^2.4.1",
+    "@types/jest": "^23.1.5",
+    "@types/react": "^16.3.13",
+    "@types/react-dom": "^16.0.5",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "cross-env": "^5.1.4",
+    "gh-pages": "^1.2.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts-ts": "^4.0.8",
+    "rollup": "^0.62.0",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-collect-sass": "^1.0.9",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-postcss": "^1.6.2",
+    "rollup-plugin-sass": "^0.9.3",
+    "rollup-plugin-typescript2": "^0.17.0",
+    "rollup-plugin-url": "^1.4.0",
+    "typescript": "^2.8.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "node-sass": "^4.10.0"
   }
 }
