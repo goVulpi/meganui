@@ -13,10 +13,12 @@
     "react-scripts": "^1.1.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.0",
     "@storybook/addon-actions": "^4.0.11",
     "@storybook/addon-links": "^4.0.11",
     "@storybook/addons": "^4.0.11",
     "@storybook/react": "^4.0.11",
+    "@storybook/storybook-deployer": "^2.8.1",
     "@types/storybook__react": "^4.0.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
@@ -28,6 +30,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "export-storybook": "build-storybook -c .storybook -o .out",
+    "deploy-storybook": "storybook-to-ghpages"
   }
 }
