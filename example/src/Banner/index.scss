@@ -1,0 +1,8 @@
+@import '../_vars.scss';
+
+.banner {
+    background: url('./background.png') center $purple;
+    background-size: cover;
+    height: 100vh;
+    padding: calc(var(--layout-base)*9);
+}

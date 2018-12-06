@@ -1,0 +1,7 @@
+@import '../_vars.scss';
+
+.login {
+    background: $white;
+    height: 100vh;
+    padding: calc(var(--layout-base)*9);
+}
