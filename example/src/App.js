@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppContainer, Button, Heading, Image, Position, Spacing } from 'meganui';
+import { AppContainer, Button, Image, Position, Spacing, Text } from 'meganui';
 import { Banner } from './Banner';
 import { Column } from './Column';
 import { Login } from './Login';
@@ -31,9 +31,9 @@ export default class App extends Component {
               </Spacing>
               <Button size="big" color="dark" block>Entrar com GitHub</Button>
               <Spacing position="top" size="auto">
-                <small>
+                <Text element="small">
                   Vulpi, feito com ❤ no San Pedro Valley, © 2018.
-                </small>
+                </Text>
               </Spacing>
             </Login>
           </Column>
