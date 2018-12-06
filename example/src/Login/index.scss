@@ -2,6 +2,9 @@
 
 .login {
     background: $white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     height: 100vh;
     padding: calc(var(--layout-base)*9);
 }

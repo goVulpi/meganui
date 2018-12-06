@@ -1,13 +1,12 @@
 .block {
-    display: block;
-}
-.left {
-    text-align: left;
-}
-
-.center {
-    text-align: center;
-}
-.right {
-    text-align: right;
+    display: flex;
+    &.left {
+        justify-content: left;
+    }
+    &.center {
+        justify-content: center;
+    }
+    &.right {
+        justify-content: right;
+    }
 }
