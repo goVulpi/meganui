@@ -1,4 +1,4 @@
-@import '../index.scss';
+@import '../_vars.scss';
 
 @mixin text-input-state($color) {
     border-color: lighten($color, 5%);

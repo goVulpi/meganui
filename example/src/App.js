@@ -1,5 +1,15 @@
 import React, { Component } from 'react';
-import { AppContainer, Button, Image, Position, Spacing, Text } from 'meganui';
+import {
+  AppContainer,
+  Button,
+  Heading,
+  Hiperlink,
+  Image,
+  Position,
+  Spacing,
+  Text,
+  TextInput
+} from 'meganui';
 import { Banner } from './Banner';
 import { Column } from './Column';
 import { Login } from './Login';
