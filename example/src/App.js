@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import {
   AppContainer,
   Button,
-  Heading,
-  Hiperlink,
   Image,
   Position,
   Spacing,
   Text,
+  /* eslint-disable no-unused-vars */
+  Heading,
+  Hiperlink,
+  Label,
   TextInput
+  /* eslint-enable no-unused-vars */
 } from 'meganui';
 import { Banner } from './Banner';
 import { Column } from './Column';
@@ -16,9 +19,11 @@ import { Footer } from './Footer';
 import { LabelPassword } from './LabelPassword';
 import { Login } from './Login';
 import { Row } from './Row';
+import LoginButton from './LoginButton';
 
 export default class App extends Component {
-  render () {
+
+  render() {
     return (
       <AppContainer>
         <Row>

@@ -3,6 +3,7 @@ import Button from './Button';
 import Heading from './Heading';
 import Hiperlink from './Hiperlink';
 import Image from './Image';
+import Label from './Label';
 import Position from './Position';
 import Spacing from './Spacing';
 import Text from './Text';
@@ -15,6 +16,7 @@ export {
   Heading,
   Hiperlink,
   Image,
+  Label,
   Position,
   Spacing,
   Text,
@@ -28,6 +30,7 @@ export default {
   Heading,
   Hiperlink,
   Image,
+  Label,
   Position,
   Spacing,
   Text,
