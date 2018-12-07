@@ -18,7 +18,7 @@ p {
     &-primary {
         color: $pink;
     }
-    &-primary-variant {
+    &-brand {
         color: $purple;
     }
     &-secondary, &-info {
@@ -35,6 +35,12 @@ p {
     }
     &-muted {
         color: darken($gray6, 10%);
+    }
+    &-light {
+        color: $gray9;
+    }
+    &-dark {
+        color: $gray1;
     }
 }
 small, .small {

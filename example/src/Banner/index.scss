@@ -1,11 +1,8 @@
 @import '../_vars.scss';
 
 .banner {
-    align-items: center;
-    background: url('./background.png') center $purple;
+    background: url('./background-logo.png') center $purple;
     background-size: cover;
-    display: flex;
     height: 100vh;
-    justify-content: center;
     padding: calc(var(--layout-base)*9);
 }

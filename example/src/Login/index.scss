@@ -1,10 +1,18 @@
 @import '../_vars.scss';
 
 .login {
-    background: $white;
+    background: $gray9;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     height: 100vh;
-    padding: calc(var(--layout-base)*9);
+    margin: auto;
+    max-width: 320px;
+    label {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: bold;
+        margin: 0 0 var(--layout-base) var(--layout-base);
+        line-height: 1;
+    }
 }
