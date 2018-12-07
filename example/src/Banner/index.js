@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import './index.scss';
 
-export class Column extends Component {
+export class Banner extends Component {
 
     render() {
         return (
-            <div className="column">
+            <div className="banner">
                 {this.props.children}
             </div>
         );

@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import './index.scss';
 
-export class Form extends Component {
+export class Row extends Component {
 
     render() {
         return (
-            <div className="form">
-                First Form
+            <div className="row">
+                {this.props.children}
             </div>
         );
     }

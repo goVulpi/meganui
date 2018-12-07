@@ -1,0 +1,12 @@
+.block {
+    display: flex;
+    &.left {
+        justify-content: left;
+    }
+    &.center {
+        justify-content: center;
+    }
+    &.right {
+        justify-content: right;
+    }
+}

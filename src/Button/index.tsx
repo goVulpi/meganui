@@ -21,7 +21,7 @@ export default class Button extends React.Component<Props> {
 
     static propTypes = {
         block: PropTypes.bool,
-        color: PropTypes.oneOf(["primary", "primary-variant", "secondary", "info", "danger", "dark", "success", "warning"]),
+        color: PropTypes.oneOf(["primary", "brand", "secondary", "info", "danger", "dark", "success", "warning"]),
         outlined: PropTypes.bool,
         size: PropTypes.oneOf(["big", "bigger", "biggest"])
     };

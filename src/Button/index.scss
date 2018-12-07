@@ -49,7 +49,7 @@
     &.primary {
         @include fill($pink);
     }
-    &.primary-variant {
+    &.brand {
         @include fill($purple);
     }
     &.secondary, &.info {

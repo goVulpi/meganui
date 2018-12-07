@@ -4,9 +4,11 @@ import styles from './index.scss';
 export type Props = {
     alt: string,
     fluid: boolean,
+    height: string,
     size: string,
     src: string,
-    thumbnail: boolean
+    thumbnail: boolean,
+    width: string
 };
 
 export default class Image extends React.Component<Props> {
@@ -32,9 +34,9 @@ export default class Image extends React.Component<Props> {
     }
 
     render() {
-        const { alt, src } = this.props;
+        const { alt, src, height, width } = this.props;
         return (
-            <img className={this.getClassNames()} src={src} alt={alt}/>
+            <img className={this.getClassNames()} src={src} alt={alt} height={height} width={width}/>
         );
     }
 
