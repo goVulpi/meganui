@@ -17,9 +17,11 @@ import { Banner } from './Banner';
 import { Column } from './Column';
 import { Login } from './Login';
 import { Row } from './Row';
+import LoginButton from './LoginButton';
 
 export default class App extends Component {
-  render () {
+
+  render() {
     return (
       <AppContainer>
         <Row>
@@ -37,7 +39,8 @@ export default class App extends Component {
                 </Position>
               </Spacing>
               <Spacing position="bottom">
-                <Button size="big" color="brand" block>Entrar</Button>
+                <LoginButton></LoginButton>
+                <Button size="big" color="brand" block onClick={this.handleClick}>Entrar</Button>
               </Spacing>
               <Spacing position="bottom">
                 <Button size="big" color="secondary" block>Entrar com LinkedIn</Button>

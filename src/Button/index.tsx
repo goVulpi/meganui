@@ -9,6 +9,8 @@ import styles from './index.scss';
 export type Props = {
     block: boolean,
     color: string,
+    disabled: boolean,
+    onClick: (event: React.MouseEvent<HTMLButtonElement>) => void,
     outlined: boolean,
     size: string
 };
@@ -22,6 +24,7 @@ export default class Button extends React.Component<Props> {
     static propTypes = {
         block: PropTypes.bool,
         color: PropTypes.oneOf(["primary", "brand", "secondary", "info", "danger", "dark", "success", "warning"]),
+        disabled: PropTypes.bool,
         outlined: PropTypes.bool,
         size: PropTypes.oneOf(["big", "bigger", "biggest"])
     };
@@ -39,8 +42,9 @@ export default class Button extends React.Component<Props> {
     }
 
     render() {
+        const { disabled, onClick } = this.props;
         return (
-        <button className={this.getClassNames()} tabIndex={0}>
+        <button className={this.getClassNames()} disabled={disabled} onClick={onClick} tabIndex={0}>
             {this.props.children ? this.props.children : ''}
         </button>
         )
