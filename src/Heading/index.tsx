@@ -1,7 +1,8 @@
 import * as React from 'react';
-import './index.scss';
+import styles from "./index.scss";
 
 export type Props = {
+    color: string,    
     level: number
 };
 
@@ -9,6 +10,18 @@ export default class Heading extends React.Component<Props> {
 
     constructor(props: any) {
         super(props);
+    }
+
+    getClassNames() : string {
+
+        let classNames : string[] = [];
+        const {color} = this.props;
+        const colorPrefix : string = "text-";
+
+        ("string" === typeof color) ? classNames.push(styles[colorPrefix.concat(color)]) : Function.prototype();
+
+        return classNames.join(" ");
+
     }
 
     render() {
@@ -20,7 +33,7 @@ export default class Heading extends React.Component<Props> {
          */
         const TagName : string = `h${levelNumber}`;
 
-        return (<TagName>{this.props.children ? this.props.children : ''}</TagName>);
+        return (<TagName className={this.getClassNames()}>{this.props.children ? this.props.children : ''}</TagName>);
     }
 
 }

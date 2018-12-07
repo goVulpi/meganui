@@ -1,0 +1,8 @@
+@import '../_vars.scss';
+
+.label-password {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+    margin-right: var(--layout-base)
+}

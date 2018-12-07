@@ -3,7 +3,6 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--primary-font);
     font-weight: bold;
-    color: $gray1;
     text-rendering: optimizeLegibility;
 }
 
@@ -41,4 +40,33 @@ h6 {
     font-size: 1rem;
     line-height: calc(var(--layout-base)*3);
     margin: 0 0 .5rem 0;
+}
+.text {
+    &-primary {
+        color: $pink;
+    }
+    &-brand {
+        color: $purple;
+    }
+    &-secondary, &-info {
+        color: $blue;
+    }
+    &-danger {
+        color: $red;
+    }
+    &-success {
+        color: $green;
+    }
+    &-warning {
+        color: $yellow;
+    }
+    &-muted {
+        color: darken($gray6, 10%);
+    }
+    &-light {
+        color: $gray9;
+    }
+    &-dark {
+        color: $gray1;
+    }
 }
