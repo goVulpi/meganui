@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import {
   AppContainer,
   Button,
-  Heading,
-  Hiperlink,
   Image,
   Position,
   Spacing,
   Text,
+  /* eslint-disable no-unused-vars */
+  Heading,
+  Hiperlink,
+  Label,
   TextInput
+  /* eslint-enable no-unused-vars */
 } from 'meganui';
 import { Banner } from './Banner';
 import { Column } from './Column';
