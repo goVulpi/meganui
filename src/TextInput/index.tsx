@@ -2,8 +2,12 @@ import * as React from 'react';
 import styles from './index.scss';
 
 export type Props = {
+    id: string,
     color: string,
     hint: string,
+    labelledBy: string,
+    required: boolean,
+    requirementsText: string,
     size: string
 };
 
@@ -23,10 +27,25 @@ export default class TextInput extends React.Component<Props> {
         return classNames.join(" ");
     }
 
+    getProps() : any {
+        const { hint, id, labelledBy, required, requirementsText } = this.props;
+        return {
+            "id": id,
+            "name": id,
+            "aria-labelled": labelledBy,
+            "className": this.getClassNames(),
+            "placeholder": hint,
+            "required": required,
+            "tabIndex": 0,
+            "title": requirementsText,
+            "type": "text"
+        };
+    }
+
     render() {
-        const { hint } = this.props;
+        
         return (
-            <input className={this.getClassNames()} placeholder={hint} type="text" />
+            <input {...this.getProps()} />
         );
     }
 
