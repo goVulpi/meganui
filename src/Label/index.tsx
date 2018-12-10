@@ -3,7 +3,7 @@ import * as React from 'react';
 export type Props = {
     children: any,
     labelFor: string,
-    labelId: string
+    id: string
 };
 
 export default class Label extends React.Component<Props> {
@@ -13,10 +13,10 @@ export default class Label extends React.Component<Props> {
     }
 
     render() {
-        const { children, labelFor, labelId } = this.props;
+        const { children, labelFor, id } = this.props;
 
         return (
-            <label htmlFor={ labelFor } id={ labelId }>{ children }</label>
+            <label id={id} htmlFor={labelFor} >{children}</label>
         );
     }
 
