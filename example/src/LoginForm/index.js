@@ -26,18 +26,21 @@ export class LoginForm extends Component {
         fetch(loginRequest).then(successCallback, errorCallback);
     }
 
+    getProps() {
+        return {
+            "id": "loginForm",
+            "name": "loginForm",
+            "autoCapitalize": "none",
+            "className": "login-form",
+            "method": "POST",
+            "onSubmit": this.onSubmit
+        };
+    }
+
     render() {
         const { children } = this.props;
         return (
-            <form id="loginForm" name="loginForm"
-                autoCapitalize="none"
-                className="login-form"
-                method="POST"
-                onSubmit={this.onSubmit}
-                {...this.props}
-                >
-                {children}
-            </form>
+            <form {...this.getProps()}>{this.props.children}</form>
         );
     }
 
