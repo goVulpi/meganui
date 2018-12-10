@@ -5,20 +5,20 @@ export default class LoginButton extends React.Component {
 
     state = {
         disabled: false,
-        text: "Press me"
+        text: "Sign up"
     }
 
     onClick = () => {
         this.setState({
             disabled: true,
-            text: "I was pressed"
+            text: "Loading..."
         });
     }
 
     render() {
         let { disabled, text } = this.state;
         return(
-            <Button disabled={disabled} onClick={this.onClick}>{ text }</Button>
+            <Button color="brand" size="big" block disabled={disabled} onClick={this.onClick}>{ text }</Button>
         );
     }
 

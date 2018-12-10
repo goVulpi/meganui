@@ -36,11 +36,10 @@ export default class App extends Component {
             <LoginForm>
               <Spacing position="top" size="auto">
                 <Position center>
-                  <Spacing position="bottom" size="big">
-                    <Image height="72px" src="logotype.png"/>
-                  </Spacing>
+                  <Image height="72px" src="logotype.png"/>
                 </Position>
               </Spacing>
+              <Spacing position="bottom" size="big"/>
               <Spacing position="bottom">
                 <Label id="emailLabel" labelFor="email">Email</Label>
                 <EmailInput id="email" labelledBy="emailLabel"
@@ -53,13 +52,13 @@ export default class App extends Component {
                 <LabelPassword>
                   <label>Password</label>
                   <Text size="small">
-                    <Hiperlink href="#">Forgot?</Hiperlink>
+                    <Hiperlink href="#">Forgot password?</Hiperlink>
                   </Text>
                 </LabelPassword>
                 <TextInput size="big" hint="Enter your password"/>
               </Spacing>
               <Spacing position="bottom">
-                <Button size="big" color="brand" block>Sign in</Button>
+                <LoginButton/>
               </Spacing>
               <Spacing position="bottom" size="big">
                 <Button size="big" color="secondary" block>Sign in with LinkedIn</Button>
