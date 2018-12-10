@@ -32,7 +32,7 @@ export default class TextInput extends React.Component<Props> {
         return {
             "id": id,
             "name": id,
-            "aria-labelled": labelledBy,
+            "aria-labelledby": labelledBy,
             "className": this.getClassNames(),
             "placeholder": hint,
             "required": required,

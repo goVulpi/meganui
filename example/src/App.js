@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import {
   AppContainer,
-  Button,
   EmailInput,
   Image,
   Position,
   Spacing,
   Text,
   /* eslint-disable no-unused-vars */
+  Button,
   Heading,
   Hiperlink,
   Label,
@@ -19,6 +19,7 @@ import { Banner } from './Banner';
 import { Column } from './Column';
 import { Footer } from './Footer';
 import { LabelPassword } from './LabelPassword';
+import { LinkedInLoginButton } from './LinkedInLoginButton';
 import { LoginForm } from './LoginForm';
 import { Row } from './Row';
 import LoginButton from './LoginButton';
@@ -66,7 +67,7 @@ export default class App extends Component {
                 <LoginButton/>
               </Spacing>
               <Spacing position="bottom" size="big">
-                <Button size="big" color="secondary" block>Sign in with LinkedIn</Button>
+                <LinkedInLoginButton/>
               </Spacing>
               <Position center>
                 <Text size="small">

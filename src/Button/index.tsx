@@ -12,7 +12,8 @@ export type Props = {
     disabled: boolean,
     onClick: (event: React.MouseEvent<HTMLButtonElement>) => void,
     outlined: boolean,
-    size: string
+    size: string,
+    type: string
 };
 
 export default class Button extends React.Component<Props> {
@@ -41,10 +42,20 @@ export default class Button extends React.Component<Props> {
         return classNames.join(" ");
     }
 
+    getProps() {
+        const { disabled } = this.props;
+        return {
+            "className": this.getClassNames(),
+            "disabled": disabled,
+            "tabIndex": 0,
+            "type": "button"
+        };
+    }
+
     render() {
-        const { disabled, onClick } = this.props;
+        const { onClick } = this.props;
         return (
-        <button className={this.getClassNames()} disabled={disabled} onClick={onClick} tabIndex={0}>
+        <button {...this.getProps()} onClick={onClick}>
             {this.props.children ? this.props.children : ''}
         </button>
         )

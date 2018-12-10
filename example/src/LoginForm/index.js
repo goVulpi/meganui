@@ -40,7 +40,7 @@ export class LoginForm extends Component {
     render() {
         const { children } = this.props;
         return (
-            <form {...this.getProps()}>{this.props.children}</form>
+            <form {...this.getProps()}>{ children }</form>
         );
     }
 

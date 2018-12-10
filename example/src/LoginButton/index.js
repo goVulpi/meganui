@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "meganui";
+import { SubmitButton } from "meganui";
 
 export default class LoginButton extends React.Component {
 
@@ -15,10 +15,21 @@ export default class LoginButton extends React.Component {
         });
     }
 
+    getButtonProps() {
+        let { disabled } = this.state;
+        return {
+            "block": true,
+            "color": "brand",
+            "disabled": disabled,
+            "onClick": this.onClick,
+            "size": "big"
+        };
+    }
+
     render() {
-        let { disabled, text } = this.state;
+        const { text } = this.state;
         return(
-            <Button color="brand" size="big" block disabled={disabled} onClick={this.onClick}>{ text }</Button>
+            <SubmitButton {...this.getButtonProps()}>{ text }</SubmitButton>
         );
     }
 

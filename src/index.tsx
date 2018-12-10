@@ -8,6 +8,7 @@ import Label from './Label';
 import PasswordInput from './PasswordInput';
 import Position from './Position';
 import Spacing from './Spacing';
+import SubmitButton from './SubmitButton';
 import Text from './Text';
 import TextInput from './TextInput';
 
@@ -23,6 +24,7 @@ export {
   PasswordInput,
   Position,
   Spacing,
+  SubmitButton,
   Text,
   TextInput
 }
@@ -39,6 +41,7 @@ export default {
   PasswordInput,
   Position,
   Spacing,
+  SubmitButton,
   Text,
   TextInput
 }
