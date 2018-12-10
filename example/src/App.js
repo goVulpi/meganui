@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
   AppContainer,
   Button,
+  EmailInput,
   Image,
   Position,
   Spacing,
@@ -17,7 +18,7 @@ import { Banner } from './Banner';
 import { Column } from './Column';
 import { Footer } from './Footer';
 import { LabelPassword } from './LabelPassword';
-import { Login } from './Login';
+import { LoginForm } from './LoginForm';
 import { Row } from './Row';
 import LoginButton from './LoginButton';
 
@@ -32,7 +33,7 @@ export default class App extends Component {
             </Banner>
           </Column>
           <Column>
-            <Login>
+            <LoginForm>
               <Spacing position="top" size="auto">
                 <Position center>
                   <Spacing position="bottom" size="big">
@@ -41,8 +42,12 @@ export default class App extends Component {
                 </Position>
               </Spacing>
               <Spacing position="bottom">
-                <label>Email</label>
-                <TextInput size="big" hint="panda@vulpi.com.br"/>
+                <Label id="emailLabel" labelFor="email">Email</Label>
+                <EmailInput id="email" labelledBy="emailLabel"
+                  hint="your.name@example.com"
+                  required={true}
+                  requirementsText="Please, enter a valid e-mail address, including the @ symbol"
+                  size="big" />
               </Spacing>
               <Spacing position="bottom" size="bigger">
                 <LabelPassword>
@@ -69,7 +74,7 @@ export default class App extends Component {
                   Vulpi, made with <Text color="primary">❤</Text> in San Pedro Valley, © 2018.
                 </Text>
               </Footer>
-            </Login>
+            </LoginForm>
           </Column>
         </Row>
       </AppContainer>

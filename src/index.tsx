@@ -1,5 +1,6 @@
 import AppContainer from './AppContainer';
 import Button from './Button';
+import EmailInput from './EmailInput';
 import Heading from './Heading';
 import Hiperlink from './Hiperlink';
 import Image from './Image';
@@ -13,6 +14,7 @@ import TextInput from './TextInput';
 export {
   AppContainer,
   Button,
+  EmailInput,
   Heading,
   Hiperlink,
   Image,
@@ -27,6 +29,7 @@ export {
 export default {
   AppContainer,
   Button,
+  EmailInput,
   Heading,
   Hiperlink,
   Image,
