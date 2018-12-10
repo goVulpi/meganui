@@ -5,9 +5,9 @@ export class Footer extends Component {
 
     render() {
         return (
-            <div className="footer">
+            <footer className="session-block-footer">
                 {this.props.children}
-            </div>
+            </footer>
         );
     }
 

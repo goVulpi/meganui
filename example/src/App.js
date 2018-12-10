@@ -17,7 +17,7 @@ import { Banner } from './Banner';
 import { Column } from './Column';
 import { Footer } from './Footer';
 import { LabelPassword } from './LabelPassword';
-import { Login } from './Login';
+import { SessionBlock } from './SessionBlock';
 import { Row } from './Row';
 import LoginButton from './LoginButton';
 
@@ -32,14 +32,13 @@ export default class App extends Component {
             </Banner>
           </Column>
           <Column>
-            <Login>
+            <SessionBlock>
               <Spacing position="top" size="auto">
                 <Position center>
-                  <Spacing position="bottom" size="big">
-                    <Image height="72px" src="logotype.png"/>
-                  </Spacing>
+                  <Image height="72px" src="logotype.png"/>
                 </Position>
               </Spacing>
+              <Spacing position="bottom" size="big"/>
               <Spacing position="bottom">
                 <label>Email</label>
                 <TextInput size="big" hint="panda@vulpi.com.br"/>
@@ -48,13 +47,13 @@ export default class App extends Component {
                 <LabelPassword>
                   <label>Password</label>
                   <Text size="small">
-                    <Hiperlink href="#">Forgot?</Hiperlink>
+                    <Hiperlink href="#">Forgot password?</Hiperlink>
                   </Text>
                 </LabelPassword>
                 <TextInput size="big" hint="Enter your password"/>
               </Spacing>
               <Spacing position="bottom">
-                <Button size="big" color="brand" block>Sign in</Button>
+                <LoginButton/>
               </Spacing>
               <Spacing position="bottom" size="big">
                 <Button size="big" color="secondary" block>Sign in with LinkedIn</Button>
@@ -69,7 +68,7 @@ export default class App extends Component {
                   Vulpi, made with <Text color="primary">❤</Text> in San Pedro Valley, © 2018.
                 </Text>
               </Footer>
-            </Login>
+            </SessionBlock>
           </Column>
         </Row>
       </AppContainer>
