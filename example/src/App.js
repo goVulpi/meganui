@@ -11,6 +11,7 @@ import {
   Heading,
   Hiperlink,
   Label,
+  PasswordInput,
   TextInput
   /* eslint-enable no-unused-vars */
 } from 'meganui';
@@ -50,12 +51,16 @@ export default class App extends Component {
               </Spacing>
               <Spacing position="bottom" size="bigger">
                 <LabelPassword>
-                  <label>Password</label>
+                  <Label id="passwordLabel" labelFor="password">Password</Label>
                   <Text size="small">
                     <Hiperlink href="#">Forgot password?</Hiperlink>
                   </Text>
                 </LabelPassword>
-                <TextInput size="big" hint="Enter your password"/>
+                <PasswordInput id="password" labelledBy="passwordLabel"
+                  hint="Enter your password"
+                  required={true}
+                  requirementsText="Please, enter your password"
+                  size="big" />
               </Spacing>
               <Spacing position="bottom">
                 <LoginButton/>
