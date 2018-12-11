@@ -1,0 +1,47 @@
+@import '../_vars.scss';
+
+.megan {
+    align-items: center;
+    background: url('background.png');
+    background-color: $black;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    .message {
+        max-width: 320px;
+        color: $gray5;
+        p:first-child {
+            color: $gray6;
+        }
+        .overlined {
+            text-decoration: line-through;
+        }
+    }
+    .ai {
+        background: url('wave.gif');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        filter: blur(32px);
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        animation: megan 2s ease-in-out;
+        mix-blend-mode: color-dodge;
+    }
+    img {
+        position: absolute;
+        bottom: 16px;
+    }
+}
+
+@keyframes megan {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
