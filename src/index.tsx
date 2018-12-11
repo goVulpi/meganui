@@ -5,6 +5,7 @@ import Heading from './Heading';
 import Hiperlink from './Hiperlink';
 import Image from './Image';
 import Label from './Label';
+import NameInput from './NameInput';
 import PasswordInput from './PasswordInput';
 import Position from './Position';
 import Spacing from './Spacing';
@@ -21,6 +22,7 @@ export {
   Hiperlink,
   Image,
   Label,
+  NameInput,
   PasswordInput,
   Position,
   Spacing,
@@ -38,6 +40,7 @@ export default {
   Hiperlink,
   Image,
   Label,
+  NameInput,
   PasswordInput,
   Position,
   Spacing,

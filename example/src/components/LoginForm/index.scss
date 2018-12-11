@@ -9,19 +9,11 @@
     max-width: 320px;
     min-height: 100vh;
     padding: calc(var(--layout-base)*3) 0;
-    label {
-        display: inline-block;
-        font-size: 0.75rem;
-        font-weight: bold;
-        margin: 0 0 var(--layout-base) var(--layout-base);
-        line-height: 1;
-    }
 }
 
 @media screen and (max-width: 768px) {
     .login-form {
         min-height: calc(100vh - var(--layout-base));
-
     }
 }
 

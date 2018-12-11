@@ -1,4 +1,5 @@
 import * as React from 'react';
+import styles from './index.scss';
 
 export type Props = {
     children: any,
@@ -16,7 +17,7 @@ export default class Label extends React.Component<Props> {
         const { children, labelFor, id } = this.props;
 
         return (
-            <label id={id} htmlFor={labelFor} >{children}</label>
+            <label id={id} className={styles.label} htmlFor={labelFor}>{children}</label>
         );
     }
 
