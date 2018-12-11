@@ -1,7 +1,10 @@
-import React, {Component} from 'react';
-import './index.scss';
+import React, { Component } from 'react';
+import { Banner } from '../../Banner';
+import { Column } from '../../Column';
+import { Row } from '../../Row';
+import LoginForm from '../../components/LoginForm';
 
-export class LoginForm extends Component {
+export default class Login extends Component {
 
     constructor(props) {
         super(props);
@@ -12,7 +15,7 @@ export class LoginForm extends Component {
         event.preventDefault();
 
         const loginInit = {
-            body: JSON.stringify({"email": ""}),
+            body: JSON.stringify({ "email": "" }),
             method: "POST"
         };
         let loginRequest = new Request("https://reqres.in/api/login", loginInit);
@@ -26,22 +29,22 @@ export class LoginForm extends Component {
         fetch(loginRequest).then(successCallback, errorCallback);
     }
 
-    getProps() {
-        return {
-            "id": "loginForm",
-            "name": "loginForm",
-            "autoCapitalize": "none",
-            "className": "login-form",
-            "method": "POST",
-            "onSubmit": this.onSubmit
-        };
-    }
-
     render() {
-        const { children } = this.props;
         return (
-            <form {...this.getProps()}>{ children }</form>
+            <Row>
+                <Column>
+                    <Banner>
+                    </Banner>
+                </Column>
+                <Column>
+                    <LoginForm onSubmit={this.onSubmit} />
+                </Column>
+            </Row>
         );
     }
 
 }
+
+
+
+

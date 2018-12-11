@@ -1,7 +1,7 @@
 import React from "react";
 import { SubmitButton } from "meganui";
 
-export default class LoginButton extends React.Component {
+export class LoginButton extends React.Component {
 
     state = {
         disabled: false,
