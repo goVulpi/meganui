@@ -1,0 +1,77 @@
+@import '../_vars.scss';
+
+@mixin motion($duration, $animation, $delay, $easing) {
+    animation: $duration $animation $easing;
+    animation-fill-mode: backwards;
+    animation-delay: $delay;
+}
+
+.megan {
+    @include motion(1s, entrance, 0s, ease-in-out);
+    align-items: center;
+    background: url('background.png');
+    background-color: $black;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    .message {
+        color: $gray5;
+        max-width: 320px;
+        p {
+            @include motion(1s, translate, 0s, cubic-bezier(0.5, 0.0, 0, 1));
+            &:first-child {
+                color: $gray6;
+                font-size: 1.5rem;
+            }
+            @for $i from 1 to 5 {
+                &:nth-child(#{$i}) {
+                    animation-delay: ($i * 2s);
+                }
+            }
+        }
+        .overlined {
+            text-decoration: line-through;
+        }
+    }
+    .wave {
+        @include motion(.2s, entrance, 0s, ease-in-out);
+        background: url('wave.gif');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        filter: blur(32px);
+        height: 100%;
+        mix-blend-mode: color-dodge;
+        position: absolute;
+        width: 100%;
+    }
+    img {
+        position: absolute;
+        bottom: 16px;
+    }
+}
+
+
+@keyframes entrance {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes translate {
+    0% {
+        line-height: 0;
+        opacity: 0;
+        transform: translateY(calc(var(--layout-base)* 10));
+    }
+    50% {
+        line-height: 1.5;
+        opacity: 0;
+    }
+}

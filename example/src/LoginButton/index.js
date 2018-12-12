@@ -5,7 +5,7 @@ export class LoginButton extends React.Component {
 
     state = {
         disabled: false,
-        text: "Sign up"
+        text: "Sign in"
     }
 
     onClick = () => {

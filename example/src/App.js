@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { AppContainer } from 'meganui';
 import Login from './containers/Login';
 import Welcome from './containers/Welcome';
+import WelcomeBack from './containers/WelcomeBack';
 import Signup from './containers/Signup';
 
 export default class App extends Component {
@@ -18,6 +19,7 @@ export default class App extends Component {
           <Route path="/login/" component={Login} exact />
           <Route path="/forgot/" component={Forgot} />
           <Route path="/welcome/" component={Welcome} />
+          <Route path="/welcome-back/" component={WelcomeBack} />
           <Route path="/signup/" component={Signup} />
         </AppContainer>
       </Router>

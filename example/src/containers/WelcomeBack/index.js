@@ -15,13 +15,13 @@ export default class Welcome extends Component {
                         Oi, Paulo!
                     </Text>
                     <Text element="p" size="lead">
-                        Eu sou a Megan, já nos conhecemos?
+                        Muito bom te ver novamente, isso significa que as coisas estão dando certo.
                     </Text>
                     <Text element="p" size="lead">
-                        Seu cadastro com o email paulomelojunior@icloud.com está feito. Volte em breve, daqui a pouco teremos novidades por aqui.
+                        Seu cadastro com o email paulomelojunior@icloud.com continua aqui comigo. Espero te ver novamente em breve.
                     </Text>
-                    <Text element="p" size="lead"> 
-                        Tchau!
+                    <Text color="light" element="p" size="lead"> 
+                        ❤
                     </Text>
                 </Message>
             </AppContainer>
