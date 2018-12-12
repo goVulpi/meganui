@@ -17,8 +17,9 @@
     height: 100vh;
     justify-content: center;
     .message {
-        color: $gray5;
+        color: $gray7;
         max-width: 320px;
+        z-index: 2;
         p {
             @include motion(1s, translate, 0s, cubic-bezier(0.5, 0.0, 0, 1));
             &:first-child {
@@ -45,6 +46,7 @@
         height: 100%;
         mix-blend-mode: color-dodge;
         position: absolute;
+        user-select: none;
         width: 100%;
     }
     img {

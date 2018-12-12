@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './index.scss';
 import { Image } from 'meganui';
+import logo from './logotype-white.png';
 
 export class Message extends Component {
 
@@ -11,7 +12,7 @@ export class Message extends Component {
                     {this.props.children}
                 </div>
                 <div className="wave"></div>
-                <Image height="64px" src="logotype-white.png"/>
+                <Image height="64px" src={logo}/>
             </div>
         );
     }
