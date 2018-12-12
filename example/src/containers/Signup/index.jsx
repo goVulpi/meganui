@@ -42,7 +42,38 @@ export default class Signup extends Component {
         this.setState({
             [name]: value
         });
+        switch(name) {
+            case "email":
+                this.handleEmailChange(event);
+            break;
+            default:
+                Function.prototype();
+            break;
+        }
+        this.handleEmailChange(event);
     }
+
+    emailValidity = {
+        "patternMismatch": "Please type a valid email address, including the @ sign",
+        "tooLong": "Please check the length of email address. It seems too long",
+        "typeMismatch": "Please type a valid email address, including the @ sign",
+        "valueMissing": "Please type a valid email address. An email is required to signup at Vulpi."
+    };
+
+    handleEmailChange = event => {
+        const { target } = event;
+        
+        if(target.validity.patternMismatch || target.validity.typeMismatch) {
+            target.setCustomValidity(this.emailValidity["patternMismatch"]);
+        } else if(target.validity.tooLong) {
+            target.setCustomValidity(this.emailValidity["tooLong"]);
+        } else if(target.validity.valueMissing) {
+            target.setCustomValidity(this.emailValidity["valueMissing"]);
+        } else {
+            // input is valid -- reset the error state, has to be an empty string
+            target.setCustomValidity("");
+        }
+    };
 
     handleSubmit = async event => {
         event.preventDefault();
