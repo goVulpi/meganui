@@ -10,6 +10,7 @@ import PasswordInput from './PasswordInput';
 import Position from './Position';
 import Spacing from './Spacing';
 import SubmitButton from './SubmitButton';
+import TelInput from './TelInput';
 import Text from './Text';
 import TextInput from './TextInput';
 
@@ -27,6 +28,7 @@ export {
   Position,
   Spacing,
   SubmitButton,
+  TelInput,
   Text,
   TextInput
 }
@@ -45,6 +47,7 @@ export default {
   Position,
   Spacing,
   SubmitButton,
+  TelInput,
   Text,
   TextInput
 }

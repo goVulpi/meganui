@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Banner } from '../../Banner';
 import { Column } from '../../Column';
 import { Row } from '../../Row';
-import { NameInput, Label, Spacing, EmailInput, PasswordInput, SubmitButton } from 'meganui';
+import { NameInput, Label, Spacing, EmailInput, PasswordInput, SubmitButton, TelInput } from 'meganui';
 
 export default class Signup extends Component {
 
@@ -47,8 +47,14 @@ export default class Signup extends Component {
                         <Spacing position="bottom">
                             <Label id="confirmPasswordLabel" labelFor="confirmPassword">Confirm the new password:</Label>
                             <PasswordInput id="confirmPassword"
-                                hint="" labelledBy="confirmPasswordLabel"
+                                labelledBy="confirmPasswordLabel"
                                 required={true} requirementsText="Please enter the same password you entered before" />
+                        </Spacing>
+                        <Spacing position="bottom">
+                            <Label id="telLabel" labelFor="tel">Your phone number:</Label>
+                            <TelInput id="tel"
+                                labelledBy="telLabel" required={true}
+                                requirementsText="Please enter a valid phone number (you don't need to enter country code)" />
                         </Spacing>
                         <SubmitButton color="primary">Sign up for free</SubmitButton>
                     </form>

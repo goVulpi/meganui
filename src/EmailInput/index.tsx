@@ -11,12 +11,14 @@ export default class EmailInput extends TextInput {
             "autoCapitalize": "none",
             "autoComplete": "email",
             "autoCorrect": "off",
+            "inputmode": "email",
             "maxLength": 254,
             "minLength": 3,
             "multiple": false,
             "pattern": "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$",
             "spellCheck": false,
-            "type": "email"
+            "type": "email",
+            "x-inputmode": "email"
         });
     }
 
