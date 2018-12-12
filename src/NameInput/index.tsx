@@ -11,6 +11,7 @@ export default class NameInput extends TextInput {
             "autoCapitalize": "words",
             "autoComplete": "name",
             "autoCorrect": "off",
+            "inputMode": "latin-name",
             "maxLength": 255,
             "minLength": 6,
             "spellCheck": true

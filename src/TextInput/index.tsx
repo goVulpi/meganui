@@ -5,6 +5,7 @@ export type Props = {
     id: string,
     color: string,
     hint: string,
+    onChange: ((event: React.ChangeEvent<HTMLInputElement>) => void),
     labelledBy: string,
     required: boolean,
     requirementsText: string,
@@ -45,7 +46,7 @@ export default class TextInput extends React.Component<Props> {
     render() {
         
         return (
-            <input {...this.getProps()} />
+            <input onChange={this.props.onChange} {...this.getProps()} />
         );
     }
 
