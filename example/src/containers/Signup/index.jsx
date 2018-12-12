@@ -62,13 +62,25 @@ export default class Signup extends Component {
                             <Spacing position="bottom">
                                 <Label id="nameLabel" labelFor="name">Name</Label>
                                 <NameInput id="name"
-                                    hint="Megan Fox"
+                                    hint="Your Name"
                                     labelledBy="nameLabel"
                                     onChange={this.handleInputChange}
                                     required={true}
                                     requirementsText="Please enter your full name"
                                     size="big"
                                     value={this.state.name}
+                                />
+                            </Spacing>
+                            <Spacing position="bottom">
+                                <Label id="telLabel" labelFor="tel">Phone number</Label>
+                                <TelInput id="tel"
+                                    hint="Phone number with area code"
+                                    labelledBy="telLabel"
+                                    onChange={this.handleInputChange}
+                                    required={true}
+                                    requirementsText="Please enter a valid phone number, including area code"
+                                    size="big"
+                                    value={this.state.tel}
                                 />
                             </Spacing>
                             <Spacing position="bottom">
@@ -83,8 +95,8 @@ export default class Signup extends Component {
                                     value={this.state.email}
                                 />
                             </Spacing>
-                            <Spacing position="bottom">
-                                <Label id="newPasswordLabel" labelFor="newPassword">Create a new password</Label>
+                            <Spacing position="bottom" size="bigger">
+                                <Label id="newPasswordLabel" labelFor="newPassword">New password</Label>
                                 <PasswordInput id="newPassword"
                                     hint="8+ characters"
                                     labelledBy="newPasswordLabel"
@@ -94,29 +106,6 @@ export default class Signup extends Component {
                                     size="big"
                                     value={this.state.newPassword}
                                 />
-                            </Spacing>
-                            <Spacing position="bottom">
-                                <Label id="confirmPasswordLabel" labelFor="confirmPassword">Confirm password</Label>
-                                <PasswordInput id="confirmPassword"
-                                    hint="Confirm the password entered above"
-                                    labelledBy="confirmPasswordLabel"
-                                    onChange={this.handleInputChange}
-                                    required={true}
-                                    requirementsText="Please enter the same password you entered before"
-                                    size="big"
-                                    value={this.state.confirmPassword}
-                                />
-                            </Spacing>
-                            <Spacing position="bottom" size="big">
-                                <Label id="telLabel" labelFor="tel">Phone number</Label>
-                                <TelInput id="tel"
-                                    hint="Phone number with area code"
-                                    labelledBy="telLabel"
-                                    onChange={this.handleInputChange}
-                                    required={true}
-                                    requirementsText="Please enter a valid phone number, including area code"
-                                    size="big"
-                                    value={this.state.tel} />
                             </Spacing>
                             <Spacing position="bottom">
                                 <SubmitButton color="brand" block size="big">Sign up</SubmitButton>
