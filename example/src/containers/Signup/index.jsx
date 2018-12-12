@@ -67,7 +67,7 @@ export default class Signup extends Component {
                                     requirementsText="Please enter a password with at least 8 characters"
                                     size="big"/>
                             </Spacing>
-                            <Spacing position="bottom" size="big">
+                            <Spacing position="bottom">
                                 <Label id="confirmPasswordLabel" labelFor="confirmPassword">Confirm password:</Label>
                                 <PasswordInput id="confirmPassword"
                                     hint="Confirm the password entered above"
@@ -76,7 +76,7 @@ export default class Signup extends Component {
                                     requirementsText="Please enter the same password you entered before"
                                     size="big"/>
                             </Spacing>
-                            <Spacing position="bottom">
+                            <Spacing position="bottom" size="big">
                                 <Label id="telLabel" labelFor="tel">Phone number:</Label>
                                 <TelInput id="tel"
                                     hint="Phone number with area code"
