@@ -23,7 +23,7 @@
         p {
             @include motion(1s, translate, 0s, cubic-bezier(0.5, 0.0, 0, 1));
             &:first-child {
-                color: $gray6;
+                color: $white;
                 font-size: 1.5rem;
             }
             @for $i from 1 to 5 {

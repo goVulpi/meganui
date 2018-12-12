@@ -42,11 +42,20 @@ export default class Signup extends Component {
                             <Spacing position="bottom">
                                 <Label id="nameLabel" labelFor="name">Name</Label>
                                 <NameInput id="name"
-                                    hint="Megan Fox"
+                                    hint="Your Name"
                                     labelledBy="nameLabel"
                                     size="big"
                                     required={true}
                                     requirementsText="Please enter your full name" />
+                            </Spacing>
+                            <Spacing position="bottom">
+                                <Label id="telLabel" labelFor="tel">Phone number</Label>
+                                <TelInput id="tel"
+                                    hint="Phone number with area code"
+                                    labelledBy="telLabel"
+                                    required={true}
+                                    requirementsText="Please enter a valid phone number, including area code"
+                                    size="big" />
                             </Spacing>
                             <Spacing position="bottom">
                                 <Label id="emailLabel" labelFor="email">Email</Label>
@@ -58,32 +67,14 @@ export default class Signup extends Component {
                                     requirementsText="Please enter your email address, including the @ symbol"
                                     />
                             </Spacing>
-                            <Spacing position="bottom">
-                                <Label id="newPasswordLabel" labelFor="newPassword">Create a new password</Label>
+                            <Spacing position="bottom" size="bigger">
+                                <Label id="newPasswordLabel" labelFor="newPassword">New password</Label>
                                 <PasswordInput id="newPassword"
                                     hint="8 characters or more"
                                     labelledBy="newPasswordLabel"
                                     required={true}
                                     requirementsText="Please enter a password with at least 8 characters"
                                     size="big"/>
-                            </Spacing>
-                            <Spacing position="bottom">
-                                <Label id="confirmPasswordLabel" labelFor="confirmPassword">Confirm password</Label>
-                                <PasswordInput id="confirmPassword"
-                                    hint="Confirm the password entered above"
-                                    labelledBy="confirmPasswordLabel"
-                                    required={true}
-                                    requirementsText="Please enter the same password you entered before"
-                                    size="big"/>
-                            </Spacing>
-                            <Spacing position="bottom" size="big">
-                                <Label id="telLabel" labelFor="tel">Phone number</Label>
-                                <TelInput id="tel"
-                                    hint="Phone number with area code"
-                                    labelledBy="telLabel"
-                                    required={true}
-                                    requirementsText="Please enter a valid phone number, including area code"
-                                    size="big" />
                             </Spacing>
                             <Spacing position="bottom">
                                 <SubmitButton color="brand" block size="big">Sign up</SubmitButton>
