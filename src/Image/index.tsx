@@ -36,7 +36,15 @@ export default class Image extends React.Component<Props> {
     render() {
         const { alt, src, height, width } = this.props;
         return (
-            <img className={this.getClassNames()} src={src} alt={alt} height={height} width={width}/>
+            <img
+                alt={alt}
+                className={this.getClassNames()}
+                draggable={false}
+                height={height}
+                src={src}
+                tabIndex={-1}
+                width={width}
+            />
         );
     }
 
