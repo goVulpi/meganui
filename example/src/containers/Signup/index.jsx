@@ -3,7 +3,18 @@ import { Banner } from '../../Banner';
 import { Column } from '../../Column';
 import { Link } from 'react-router-dom'; 
 import { Row } from '../../Row';
-import { NameInput, Label, Position, Spacing, EmailInput, PasswordInput, SubmitButton, Text, Button } from 'meganui';
+import {
+    Button,
+    EmailInput,
+    Label,
+    NameInput,
+    PasswordInput,
+    Position,
+    Spacing,
+    SubmitButton,
+    TelInput,
+    Text
+} from 'meganui';
 import { FormBox } from '../../FormBox';
 
 export default class Signup extends Component {
@@ -29,7 +40,7 @@ export default class Signup extends Component {
                         <FormBox>
                             <Spacing position="bottom"/>
                             <Spacing position="bottom">
-                                <Label id="nameLabel" labelFor="name">Name</Label>
+                                <Label id="nameLabel" labelFor="name">Name:</Label>
                                 <NameInput id="name"
                                     hint="Megan Fox"
                                     labelledBy="nameLabel"
@@ -38,7 +49,7 @@ export default class Signup extends Component {
                                     requirementsText="Please enter your full name" />
                             </Spacing>
                             <Spacing position="bottom">
-                                <Label id="emailLabel" labelFor="email">Email</Label>
+                                <Label id="emailLabel" labelFor="email">Email:</Label>
                                 <EmailInput id="email"
                                     hint="your.name@example.com"
                                     labelledBy="emailLabel"
@@ -48,24 +59,31 @@ export default class Signup extends Component {
                                     />
                             </Spacing>
                             <Spacing position="bottom">
-                                <Label id="newPasswordLabel" labelFor="newPassword">Password</Label>
-                                <PasswordInput
-                                    hint="More than 8 characters"
-                                    id="newPassword"
+                                <Label id="newPasswordLabel" labelFor="newPassword">Create a new password:</Label>
+                                <PasswordInput id="newPassword"
+                                    hint="8 characters or more"
                                     labelledBy="newPasswordLabel"
                                     required={true}
                                     requirementsText="Please enter a password with at least 8 characters"
                                     size="big"/>
                             </Spacing>
                             <Spacing position="bottom" size="big">
-                                <Label id="confirmPasswordLabel" labelFor="confirmPassword">Confirm password</Label>
-                                <PasswordInput
-                                    hint="Repeat your password"
-                                    id="confirmPassword"
+                                <Label id="confirmPasswordLabel" labelFor="confirmPassword">Confirm password:</Label>
+                                <PasswordInput id="confirmPassword"
+                                    hint="Confirm the password entered above"
                                     labelledBy="confirmPasswordLabel"
                                     required={true}
                                     requirementsText="Please enter the same password you entered before"
                                     size="big"/>
+                            </Spacing>
+                            <Spacing position="bottom">
+                                <Label id="telLabel" labelFor="tel">Phone number:</Label>
+                                <TelInput id="tel"
+                                    hint="Phone number with area code"
+                                    labelledBy="telLabel"
+                                    required={true}
+                                    requirementsText="Please enter a valid phone number, including area code"
+                                    size="big" />
                             </Spacing>
                             <Spacing position="bottom">
                                 <SubmitButton color="brand" block size="big">Sign up</SubmitButton>
