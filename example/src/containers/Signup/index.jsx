@@ -40,7 +40,7 @@ export default class Signup extends Component {
                         <FormBox>
                             <Spacing position="bottom"/>
                             <Spacing position="bottom">
-                                <Label id="nameLabel" labelFor="name">Name:</Label>
+                                <Label id="nameLabel" labelFor="name">Name</Label>
                                 <NameInput id="name"
                                     hint="Megan Fox"
                                     labelledBy="nameLabel"
@@ -49,7 +49,7 @@ export default class Signup extends Component {
                                     requirementsText="Please enter your full name" />
                             </Spacing>
                             <Spacing position="bottom">
-                                <Label id="emailLabel" labelFor="email">Email:</Label>
+                                <Label id="emailLabel" labelFor="email">Email</Label>
                                 <EmailInput id="email"
                                     hint="your.name@example.com"
                                     labelledBy="emailLabel"
@@ -59,7 +59,7 @@ export default class Signup extends Component {
                                     />
                             </Spacing>
                             <Spacing position="bottom">
-                                <Label id="newPasswordLabel" labelFor="newPassword">Create a new password:</Label>
+                                <Label id="newPasswordLabel" labelFor="newPassword">Create a new password</Label>
                                 <PasswordInput id="newPassword"
                                     hint="8 characters or more"
                                     labelledBy="newPasswordLabel"
@@ -68,7 +68,7 @@ export default class Signup extends Component {
                                     size="big"/>
                             </Spacing>
                             <Spacing position="bottom">
-                                <Label id="confirmPasswordLabel" labelFor="confirmPassword">Confirm password:</Label>
+                                <Label id="confirmPasswordLabel" labelFor="confirmPassword">Confirm password</Label>
                                 <PasswordInput id="confirmPassword"
                                     hint="Confirm the password entered above"
                                     labelledBy="confirmPasswordLabel"
@@ -77,7 +77,7 @@ export default class Signup extends Component {
                                     size="big"/>
                             </Spacing>
                             <Spacing position="bottom" size="big">
-                                <Label id="telLabel" labelFor="tel">Phone number:</Label>
+                                <Label id="telLabel" labelFor="tel">Phone number</Label>
                                 <TelInput id="tel"
                                     hint="Phone number with area code"
                                     labelledBy="telLabel"

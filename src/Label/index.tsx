@@ -17,7 +17,7 @@ export default class Label extends React.Component<Props> {
         const { children, labelFor, id } = this.props;
 
         return (
-            <label id={id} className={styles.label} htmlFor={labelFor}>{children}</label>
+            <label id={id} className={styles.label} htmlFor={labelFor}>{children}<span hidden>:</span></label>
         );
     }
 
