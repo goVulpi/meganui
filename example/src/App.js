@@ -5,22 +5,21 @@ import Login from './containers/Login';
 import Welcome from './containers/Welcome';
 import WelcomeBack from './containers/WelcomeBack';
 import Signup from './containers/Signup';
+import LoginCallback from './containers/LoginCallback';
 
 export default class App extends Component {
 
   render() {
-
-    const Forgot = () => <h2>Forgot</h2>;
 
     return (
 
       <Router>
         <AppContainer>
           <Route path="/login/" component={Login} exact />
-          <Route path="/forgot/" component={Forgot} />
           <Route path="/welcome/" component={Welcome} />
           <Route path="/welcome-back/" component={WelcomeBack} />
           <Route path="/signup/" component={Signup} />
+          <Route path="/login-callback/" component={LoginCallback} />
         </AppContainer>
       </Router>
     )
