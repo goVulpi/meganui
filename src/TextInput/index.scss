@@ -53,7 +53,6 @@
     }
 
     form:focus-within &:invalid, form:hover &:invalid {
-        @include text-input-state($yellow);
         &:focus, &:hover {
             @include text-input-state($red);
         }
