@@ -5,12 +5,11 @@ import Login from './containers/Login';
 import Welcome from './containers/Welcome';
 import WelcomeBack from './containers/WelcomeBack';
 import Signup from './containers/Signup';
+import LoginCallback from './containers/LoginCallback';
 
 export default class App extends Component {
 
   render() {
-
-    const LoginCallback = () => <h2>Login callback</h2>;
 
     return (
 
