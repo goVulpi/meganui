@@ -126,7 +126,7 @@ export default class Signup extends Component {
         return (
             <Row>
                 <Column>
-                    <Banner>{this.state.name} {this.state.email} {this.state.name}</Banner>
+                    <Banner></Banner>
                 </Column>
                 <Column>
                     <form method="post" onSubmit={this.handleSubmit}>
