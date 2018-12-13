@@ -131,74 +131,72 @@ export default class Signup extends Component {
                 <Column>
                     <form method="post" onSubmit={this.handleSubmit}>
                         <FormBox>
-                            <fieldset disabled={this.state.loading}>
-                                <Spacing position="bottom" />
-                                <Spacing position="bottom">
-                                    <Label id="nameLabel" labelFor="name">Name</Label>
-                                    <NameInput id="name"
-                                        hint="Your Name"
-                                        labelledBy="nameLabel"
-                                        onChange={this.handleInputChange}
-                                        required={true}
-                                        requirementsText="Please enter your full name"
-                                        size="big"
-                                        value={this.state.name}
-                                    />
-                                </Spacing>
-                                <Spacing position="bottom">
-                                    <Label id="telLabel" labelFor="tel">Phone number</Label>
-                                    <TelInput id="tel"
-                                        hint="Phone number with area code"
-                                        labelledBy="telLabel"
-                                        onChange={this.handleInputChange}
-                                        required={true}
-                                        requirementsText="Please enter a valid phone number, including area code"
-                                        size="big"
-                                        value={this.state.tel}
-                                    />
-                                </Spacing>
-                                <Spacing position="bottom">
-                                    <Label id="emailLabel" labelFor="email">Email</Label>
-                                    <EmailInput id="email"
-                                        hint="your.name@example.com"
-                                        labelledBy="emailLabel"
-                                        onChange={this.handleInputChange}
-                                        required={true}
-                                        requirementsText="Please enter your email address, including the @ symbol"
-                                        size="big"
-                                        value={this.state.email}
-                                    />
-                                </Spacing>
-                                <Spacing position="bottom" size="bigger">
-                                    <Label id="newPasswordLabel" labelFor="newPassword">New password</Label>
-                                    <PasswordInput id="newPassword"
-                                        hint="8+ characters"
-                                        labelledBy="newPasswordLabel"
-                                        onChange={this.handleInputChange}
-                                        required={true}
-                                        requirementsText="Please enter a password with at least 8 characters"
-                                        size="big"
-                                        value={this.state.newPassword}
-                                    />
-                                </Spacing>
-                                <Spacing position="bottom">
-                                    <SubmitButton color="brand" block size="big">
-                                        <span hidden={!this.state.loading}>Loading&hellip;</span>
-                                        <span hidden={this.state.loading}>Sign up for free</span>
-                                    </SubmitButton>
-                                </Spacing>
-                                <Spacing position="bottom">
-                                    <Button color="dark" size="big" block>Sign up with GitHub</Button>
-                                </Spacing>
-                                <Spacing position="bottom" size="big">
-                                    <Button color="secondary" size="big" block>Sign up with LinkedIn</Button>
-                                </Spacing>
-                                <Position center>
-                                    <Text size="small">
-                                        Already have an account? <Link to="/login/">Sign in</Link>
-                                    </Text>
-                                </Position>
-                            </fieldset>
+                            <Spacing position="bottom" />
+                            <Spacing position="bottom">
+                                <Label id="nameLabel" labelFor="name">Name</Label>
+                                <NameInput id="name"
+                                    hint="Your Name"
+                                    labelledBy="nameLabel"
+                                    onChange={this.handleInputChange}
+                                    required={true}
+                                    requirementsText="Please enter your full name"
+                                    size="big"
+                                    value={this.state.name}
+                                />
+                            </Spacing>
+                            <Spacing position="bottom">
+                                <Label id="telLabel" labelFor="tel">Phone number</Label>
+                                <TelInput id="tel"
+                                    hint="Phone number with area code"
+                                    labelledBy="telLabel"
+                                    onChange={this.handleInputChange}
+                                    required={true}
+                                    requirementsText="Please enter a valid phone number, including area code"
+                                    size="big"
+                                    value={this.state.tel}
+                                />
+                            </Spacing>
+                            <Spacing position="bottom">
+                                <Label id="emailLabel" labelFor="email">Email</Label>
+                                <EmailInput id="email"
+                                    hint="your.name@example.com"
+                                    labelledBy="emailLabel"
+                                    onChange={this.handleInputChange}
+                                    required={true}
+                                    requirementsText="Please enter your email address, including the @ symbol"
+                                    size="big"
+                                    value={this.state.email}
+                                />
+                            </Spacing>
+                            <Spacing position="bottom" size="bigger">
+                                <Label id="newPasswordLabel" labelFor="newPassword">New password</Label>
+                                <PasswordInput id="newPassword"
+                                    hint="8+ characters"
+                                    labelledBy="newPasswordLabel"
+                                    onChange={this.handleInputChange}
+                                    required={true}
+                                    requirementsText="Please enter a password with at least 8 characters"
+                                    size="big"
+                                    value={this.state.newPassword}
+                                />
+                            </Spacing>
+                            <Spacing position="bottom">
+                                <SubmitButton color="brand" block size="big">
+                                    <span hidden={!this.state.loading}>Loading&hellip;</span>
+                                    <span hidden={this.state.loading}>Sign up for free</span>
+                                </SubmitButton>
+                            </Spacing>
+                            <Spacing position="bottom">
+                                <Button color="dark" size="big" block>Sign up with GitHub</Button>
+                            </Spacing>
+                            <Spacing position="bottom" size="big">
+                                <Button color="secondary" size="big" block>Sign up with LinkedIn</Button>
+                            </Spacing>
+                            <Position center>
+                                <Text size="small">
+                                    Already have an account? <Link to="/login/">Sign in</Link>
+                                </Text>
+                            </Position>
                         </FormBox>
                     </form>
                 </Column>
