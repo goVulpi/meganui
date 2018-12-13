@@ -3,7 +3,7 @@ import { Banner } from '../../Banner';
 import { Column } from '../../Column';
 import { Row } from '../../Row';
 import LoginForm from '../../components/LoginForm';
-
+import { Toast } from 'meganui';
 export default class Login extends Component {
 
     constructor(props) {
@@ -39,6 +39,7 @@ export default class Login extends Component {
                 <Column>
                     <LoginForm onSubmit={this.onSubmit} />
                 </Column>
+                <Toast color="danger">Lorem ipsum dolor</Toast>
             </Row>
         );
     }

@@ -1,0 +1,62 @@
+@import '../_vars.scss';
+
+@mixin fill($color) {
+    background: $color;
+    box-shadow:
+    transparentize($black, .7) 0 .5rem .5rem -.5rem, 
+    transparentize($black, .8) 0 1rem 1rem -.5rem, 
+    transparentize($color, .9) 0 2rem 2rem -.5rem;
+    }
+.toast {
+    @include fill($gray4);
+    animation: entrance .4s cubic-bezier(.5,0,0,1) 2s 1 normal backwards;
+    align-items: center;
+    bottom: calc(var(--layout-base)*5);
+    border-radius: .5rem;
+    color: transparentize($white, .2);
+    display: flex;
+    padding: 1rem 2rem;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    transform-origin: right;
+    a {
+        border-left: 1px solid transparentize($white, .8);
+        color: $white;
+        font-size: .75rem;
+        font-weight: bold;
+        margin-left: 2rem;
+        padding-left: 2rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        
+    }
+    &.primary {
+        @include fill($pink);
+    }
+    &.brand {
+        @include fill($purple);
+    }
+    &.secondary, &.info {
+        @include fill($blue);
+    }
+    &.danger {
+        @include fill($red);
+    }
+    &.dark {
+        @include fill($gray1);
+    }
+    &.success {
+        @include fill($green)
+    }
+    &.warning {
+        @include fill($yellow);
+    }
+}
+
+@keyframes entrance {
+    0% {
+        opacity: 0;
+        transform: translateY(2rem) translateX(50%);
+    }
+}

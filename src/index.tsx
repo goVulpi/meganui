@@ -13,6 +13,7 @@ import SubmitButton from './SubmitButton';
 import TelInput from './TelInput';
 import Text from './Text';
 import TextInput from './TextInput';
+import Toast from './Toast';
 
 // export components as named exports
 export {
@@ -30,7 +31,8 @@ export {
   SubmitButton,
   TelInput,
   Text,
-  TextInput
+  TextInput,
+  Toast
 }
 
 // set a default export for this module
@@ -49,5 +51,6 @@ export default {
   SubmitButton,
   TelInput,
   Text,
-  TextInput
+  TextInput,
+  Toast
 }
