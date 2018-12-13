@@ -47,7 +47,6 @@ export default class LoginForm extends Component {
                     <Spacing position="bottom">
                         <LoginButton />
                     </Spacing>
-                    <hr />
                     <Spacing position="bottom">
                         <Button block color="dark" size="big">Sign in with GitHub</Button>
                     </Spacing>
