@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Banner } from '../../Banner';
 import { Column } from '../../Column';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 import { Row } from '../../Row';
 import {
     Button,
@@ -42,53 +42,82 @@ export default class Signup extends Component {
         this.setState({
             [name]: value
         });
-        switch(name) {
+        switch (name) {
             case "email":
                 this.handleEmailChange(event);
-            break;
+                break;
+            case "tel":
+                this.handleTelChange(event);
+                break;
+            case "name":
+                this.handleNameChange(event);
+                break;
+            case "password":
+                this.handlePasswordChange(event);
+                break;
             default:
                 Function.prototype();
-            break;
+                break;
         }
-        this.handleEmailChange(event);
     }
 
-    emailValidity = {
-        "patternMismatch": "Please type a valid email address, including the @ sign",
-        "tooLong": "Please check the length of email address. It seems too long",
-        "typeMismatch": "Please type a valid email address, including the @ sign",
-        "valueMissing": "Please type a valid email address. An email is required to signup at Vulpi."
-    };
+    setCustomValidity = (target, validityMessages) => {
+        target.setCustomValidity("");
+
+        for (let prop in validityMessages) {
+            if (target.validity[prop]) {
+                target.setCustomValidity(validityMessages[prop]);
+            }
+        }
+    }
 
     handleEmailChange = event => {
-        const { target } = event;
-        
-        if(target.validity.patternMismatch || target.validity.typeMismatch) {
-            target.setCustomValidity(this.emailValidity["patternMismatch"]);
-        } else if(target.validity.tooLong) {
-            target.setCustomValidity(this.emailValidity["tooLong"]);
-        } else if(target.validity.valueMissing) {
-            target.setCustomValidity(this.emailValidity["valueMissing"]);
-        } else {
-            // input is valid -- reset the error state, has to be an empty string
-            target.setCustomValidity("");
-        }
+        this.setCustomValidity(event.target, {
+            "patternMismatch": "Please type a valid email address, including the @ sign",
+            "tooLong": "Please check the length of email address. It seems too long",
+            "typeMismatch": "Please type a valid email address, including the @ sign",
+            "valueMissing": "Please type a valid email address. An email is required to signup at Vulpi."
+        });
+    };
+
+    handleNameChange = event => {
+        this.setCustomValidity(event.target, {
+            "patternMismatch": "Please type your name, including first and last name",
+            "tooLong": "Please check the length of your name. It seems so long",
+            "typeMismatch": "Please type your name. Don't include special characters or numbers",
+            "valueMissing": "Please type your first and last name. They are required to signup at Vulpi"
+        });
+    };
+
+    handleTelChange = event => {
+        this.setCustomValidity(event.target, {
+            "patternMismatch": "Please type a valid phone number, including area code",
+            "tooLong": "Please check the length of your phone number. It seems so long",
+            "typeMismatch": "Please type your mobile phone number. Don't include alpha characters",
+            "valueMissing": "Please type your mobile phone number. It is required to signup at Vulpi"
+        });
+    };
+
+    handlePasswordChange = event => {
+        this.setCustomValidity(event.target, {
+            
+        });
     };
 
     handleSubmit = async event => {
         event.preventDefault();
-        this.setState({loading: true});
+        this.setState({ loading: true });
         const data = {
             "email": this.state.email,
             "password": this.state.password
         };
         try {
-            const response = await axios.post("https://reqres.in/api/register", {data});
+            const response = await axios.post("https://reqres.in/api/register", { data });
             console.log(response);
-            this.setState({loading: false});
+            this.setState({ loading: false });
         }
-        catch(e) {
-            this.setState({loading: false});
+        catch (e) {
+            this.setState({ loading: false });
             console.log("errou", e.response);
         }
     }
@@ -103,7 +132,7 @@ export default class Signup extends Component {
                     <form method="post" onSubmit={this.handleSubmit}>
                         <FormBox>
                             <fieldset disabled={this.state.loading}>
-                                <Spacing position="bottom"/>
+                                <Spacing position="bottom" />
                                 <Spacing position="bottom">
                                     <Label id="nameLabel" labelFor="name">Name</Label>
                                     <NameInput id="name"

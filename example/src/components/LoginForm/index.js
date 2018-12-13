@@ -32,12 +32,7 @@ export default class LoginForm extends Component {
                         size="big" />
                     </Spacing>
                     <Spacing position="bottom" size="bigger">
-                        <LabelPassword>
                         <Label id="passwordLabel" labelFor="password">Password</Label>
-                        <Text size="small">
-                            <Link to="/forgot/">Forgot password?</Link>
-                        </Text>
-                        </LabelPassword>
                         <PasswordInput id="password" labelledBy="passwordLabel"
                         hint="Enter your password"
                         required={true}
@@ -46,7 +41,15 @@ export default class LoginForm extends Component {
                     </Spacing>
                     <Spacing position="bottom">
                         <LoginButton />
-                    </Spacing>                    
+                    </Spacing>
+                    <Spacing position="bottom" size="big">
+                    <Position center>
+                        <Text size="small">
+                            <Link to="/forgot/">Forgot password?</Link>
+                        </Text>
+                    </Position>
+                    </Spacing>
+                    <hr />
                     <Spacing position="bottom">
                         <Button block color="dark" size="big">Sign in with GitHub</Button>
                     </Spacing>
