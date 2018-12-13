@@ -8,11 +8,11 @@ export class Message extends Component {
     render() {
         return (
             <div className="megan">
-                <div className="message">
+                <div id="message" className="message">
                     {this.props.children}
                 </div>
                 <div className="wave"></div>
-                <Image height="64px" src={logo}/>
+                <Image height={64} src={logo}/>
             </div>
         );
     }

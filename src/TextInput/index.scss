@@ -48,10 +48,15 @@
         padding: .6875rem 1.5rem;
         font-size: 1.25rem;
     }
-    &.success {
+    &:valid, &.success {
         @include text-input-state($green);
     }
-    &.error {
-        @include text-input-state($red);
-    }
+
+    form:focus-within &:invalid, form:hover &:invalid {
+        @include text-input-state($yellow);
+        &:focus, &:hover {
+            @include text-input-state($red);
+        }
+    }    
+
 }
