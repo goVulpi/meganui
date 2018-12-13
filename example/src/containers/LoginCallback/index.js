@@ -8,10 +8,6 @@ export default class LoginCallback extends Component {
         "state": ""
     }
 
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         let parsed = queryString.parse(this.props.location.search);
         this.setState({

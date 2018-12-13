@@ -31,41 +31,34 @@ export default class Signup extends Component {
 
     constructor(props) {
         super(props);
-        this.handleSubmit = this.handleSubmit.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleInputChange = event => {
+        console.log("Handling input change");
         const target = event.target;
-        const value = ("checkbox" === target.type) ? target.checked : target.value;
-        const name = target.name;
+        const { checked, name, type, value } = target;
+        const fieldValue = ("checkbox" === type) ? checked : value;
         this.setState({
-            [name]: value
+            [name]: fieldValue
         });
         switch (name) {
-            case "email":
-                this.handleEmailChange(event);
-                break;
-            case "tel":
-                this.handleTelChange(event);
-                break;
-            case "name":
-                this.handleNameChange(event);
-                break;
-            case "password":
-                this.handlePasswordChange(event);
-                break;
-            default:
-                Function.prototype();
-                break;
+            case "email": this.handleEmailChange(event); break;
+            case "name": this.handleNameChange(event); break;
+            case "password": this.handlePasswordChange(event); break;
+            case "tel": this.handleTelChange(event); break;
+            default: Function.prototype(); break;
         }
     }
 
     setCustomValidity = (target, validityMessages) => {
+        console.log("Clearing custom validity");
         target.setCustomValidity("");
 
         for (let prop in validityMessages) {
             if (target.validity[prop]) {
+                console.log("Setting custom validity", prop, target.validity[prop]);
                 target.setCustomValidity(validityMessages[prop]);
             }
         }
@@ -100,7 +93,9 @@ export default class Signup extends Component {
 
     handlePasswordChange = event => {
         this.setCustomValidity(event.target, {
-            
+            "patternMismatch": "Please create a password, but do not be so creative",
+            "tooLong": "A little too safe, do not you think? Please try to enter a shorter password",
+            "typeMismatch": "Plase create a password"
         });
     };
 
@@ -130,14 +125,14 @@ export default class Signup extends Component {
                 </Column>
                 <Column>
                     <form method="post" onSubmit={this.handleSubmit}>
-                        <FormBox>
+                        <FormBox disabled={this.state.loading}>
                             <Spacing position="bottom" />
                             <Spacing position="bottom">
                                 <Label id="nameLabel" labelFor="name">Name</Label>
                                 <NameInput id="name"
                                     hint="Your Name"
                                     labelledBy="nameLabel"
-                                    onChange={this.handleInputChange}
+                                    onChange={this.handleNameChange}
                                     required={true}
                                     requirementsText="Please enter your full name"
                                     size="big"
@@ -149,7 +144,7 @@ export default class Signup extends Component {
                                 <TelInput id="tel"
                                     hint="Phone number with area code"
                                     labelledBy="telLabel"
-                                    onChange={this.handleInputChange}
+                                    onChange={this.handleTelChange}
                                     required={true}
                                     requirementsText="Please enter a valid phone number, including area code"
                                     size="big"
@@ -161,7 +156,7 @@ export default class Signup extends Component {
                                 <EmailInput id="email"
                                     hint="your.name@example.com"
                                     labelledBy="emailLabel"
-                                    onChange={this.handleInputChange}
+                                    onChange={this.handleEmailChange}
                                     required={true}
                                     requirementsText="Please enter your email address, including the @ symbol"
                                     size="big"
@@ -173,7 +168,7 @@ export default class Signup extends Component {
                                 <PasswordInput id="newPassword"
                                     hint="8+ characters"
                                     labelledBy="newPasswordLabel"
-                                    onChange={this.handleInputChange}
+                                    onChange={this.handlePasswordChange}
                                     required={true}
                                     requirementsText="Please enter a password with at least 8 characters"
                                     size="big"

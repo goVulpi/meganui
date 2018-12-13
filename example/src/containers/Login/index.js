@@ -4,6 +4,7 @@ import { Column } from '../../Column';
 import { Row } from '../../Row';
 import LoginForm from '../../components/LoginForm';
 import { Toast } from 'meganui';
+
 export default class Login extends Component {
 
     constructor(props) {

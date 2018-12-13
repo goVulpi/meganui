@@ -11,7 +11,7 @@ export default class EmailInput extends TextInput {
             "autoCapitalize": "none",
             "autoComplete": "email",
             "autoCorrect": "off",
-            "inputmode": "email",
+            "inputMode": "email",
             "maxLength": 254,
             "minLength": 3,
             "multiple": false,

@@ -3,13 +3,10 @@ import './index.scss';
 
 export class Fieldset extends Component {
     
-    state = {
-        loading: false
-    };
-    
     render() {
+        const { disabled } = this.props;
         return (
-            <fieldset disabled={this.state.loading}>
+            <fieldset disabled={disabled}>
                 {this.props.children}
             </fieldset>
         );
