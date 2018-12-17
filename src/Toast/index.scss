@@ -20,6 +20,7 @@
 }
 .toast {
     @include fill($gray4);
+    @include animation(reverse);
     align-items: center;
     border-radius: .5rem;
     color: transparentize($white, .2);
@@ -28,9 +29,6 @@
     max-width: 30rem;
     padding: 1rem 2rem;
     position: relative;
-    &.will-close {
-        @include animation(reverse);
-    }
     &:hover {
         animation-play-state: paused;
     }
@@ -43,6 +41,7 @@
         background: none;
         border: none;
         color: $white;
+        cursor: pointer;
         font-size: .75rem;
         font-weight: bold;
         padding: 0;
@@ -50,8 +49,8 @@
         text-decoration: none;
     }
     &.open {
-        display: flex;
         @include animation(normal);
+        display: flex;
     }
     &.primary {
         @include fill($pink);
