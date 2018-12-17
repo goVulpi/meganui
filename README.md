@@ -27,6 +27,12 @@ class Example extends React.Component {
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+## How to run storybook
+
+1. Change directory to `example`;
+2. Run `npm install` to install dependencies;
+3. Run `npm run storybook`.
+
 ## License
 
 MIT © [goVulpi](https://github.com/goVulpi)
