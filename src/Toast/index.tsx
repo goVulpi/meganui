@@ -4,7 +4,7 @@ import styles from './index.scss';
 
 export type Props = {
     color: string,
-    close: boolean
+    open: boolean
 };
 
 export default class Toast extends React.Component<Props> {
@@ -18,10 +18,10 @@ export default class Toast extends React.Component<Props> {
     };
 
     getClassNames() : string {
-        const { color, close } = this.props;
+        const { color, open } = this.props;
         let classNames : string[] = [styles["toast"]];
 
-        close ? classNames.push(styles["close"]) : Function.prototype();
+        open ? classNames.push(styles["open"]) : Function.prototype();
         (typeof color === "string") ? classNames.push(styles[color]) : Function.prototype();
 
         return classNames.join(" ");

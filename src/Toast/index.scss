@@ -20,7 +20,7 @@
 }
 .toast {
     @include fill($gray4);
-    @include animation(normal);
+    @include animation(reverse);
     align-items: center;
     border-radius: .5rem;
     color: transparentize($white, .2);
@@ -47,8 +47,8 @@
         text-transform: uppercase;
         text-decoration: none;
     }
-    &.close { 
-        @include animation(reverse);
+    &.open {
+        @include animation(normal);
     }
     &.primary {
         @include fill($pink);
