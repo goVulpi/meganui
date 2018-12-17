@@ -3,33 +3,55 @@
 @mixin fill($color) {
     background: $color;
     box-shadow:
-    transparentize($black, .7) 0 .5rem .5rem -.5rem, 
     transparentize($black, .8) 0 1rem 1rem -.5rem, 
     transparentize($color, .9) 0 2rem 2rem -.5rem;
-    }
+}
+
+@mixin animation($direction) {
+    animation: animation .4s cubic-bezier(.5,0,0,1) 0s 1 $direction both;
+}
+
+.wrapper {
+    bottom: 0;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
 .toast {
     @include fill($gray4);
-    animation: entrance .4s cubic-bezier(.5,0,0,1) 2s 1 normal backwards;
     align-items: center;
-    bottom: calc(var(--layout-base)*5);
     border-radius: .5rem;
     color: transparentize($white, .2);
-    display: flex;
+    display: none;
+    margin: 0 auto 2.5rem;
+    max-width: 30rem;
     padding: 1rem 2rem;
-    position: absolute;
-    right: 50%;
-    transform: translateX(50%);
-    transform-origin: right;
-    a {
-        border-left: 1px solid transparentize($white, .8);
+    position: relative;
+    &.will-close {
+        @include animation(reverse);
+    }
+    &:hover {
+        animation-play-state: paused;
+    }
+    span {
+        border-right: 1px solid transparentize($white, .8);
+        margin-right: 2rem;
+        padding-right: 2rem;
+    }
+    button {
+        background: none;
+        border: none;
         color: $white;
         font-size: .75rem;
         font-weight: bold;
-        margin-left: 2rem;
-        padding-left: 2rem;
+        padding: 0;
         text-transform: uppercase;
         text-decoration: none;
-        
+    }
+    &.open {
+        display: flex;
+        @include animation(normal);
     }
     &.primary {
         @include fill($pink);
@@ -54,9 +76,21 @@
     }
 }
 
-@keyframes entrance {
+@keyframes animation {
     0% {
         opacity: 0;
-        transform: translateY(2rem) translateX(50%);
+        transform: translateY(2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 30rem) {
+    .toast {
+        border-radius: 0;
+        margin-bottom: 0;
+        width: 100%;
     }
 }
