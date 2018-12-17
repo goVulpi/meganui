@@ -1,10 +1,6 @@
-import React from 'react';
-
+import React, { Component } from "react";
 import { storiesOf } from '@storybook/react';
-import { Button, Heading } from 'meganui';
+// import { linkTo } from '@storybook/addon-links';
+import ButtonStory from './Button';
 
-storiesOf("Button", module)
-  .add("with text", () => <Button>Hello Button</Button>);
-
-storiesOf("Heading", module)
-  .add("level 1", () => <Heading>Level 1</Heading>);
+storiesOf('Button', module).add('Buttons', () => <ButtonStory></ButtonStory>);
