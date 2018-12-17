@@ -12,23 +12,25 @@
 }
 
 .wrapper {
-    width: 100%;
-    position: absolute;
-    display: flex;
     bottom: 0;
+    display: flex;
     overflow: hidden;
+    position: absolute;
+    width: 100%;
 }
 .toast {
     @include fill($gray4);
-    @include animation(reverse);
     align-items: center;
     border-radius: .5rem;
     color: transparentize($white, .2);
-    display: flex;
+    display: none;
     margin: 0 auto 2.5rem;
     max-width: 30rem;
     padding: 1rem 2rem;
     position: relative;
+    &.will-close {
+        @include animation(reverse);
+    }
     &:hover {
         animation-play-state: paused;
     }
@@ -48,6 +50,7 @@
         text-decoration: none;
     }
     &.open {
+        display: flex;
         @include animation(normal);
     }
     &.primary {
