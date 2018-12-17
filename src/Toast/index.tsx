@@ -3,7 +3,8 @@ import * as PropTypes from 'prop-types';
 import styles from './index.scss';
 
 export type Props = {
-    color: string
+    color: string,
+    close: boolean
 };
 
 export default class Toast extends React.Component<Props> {
@@ -17,9 +18,10 @@ export default class Toast extends React.Component<Props> {
     };
 
     getClassNames() : string {
-        const { color } = this.props;
+        const { color, close } = this.props;
         let classNames : string[] = [styles["toast"]];
 
+        close ? classNames.push(styles["close"]) : Function.prototype();
         (typeof color === "string") ? classNames.push(styles[color]) : Function.prototype();
 
         return classNames.join(" ");
@@ -33,9 +35,13 @@ export default class Toast extends React.Component<Props> {
 
     render() {
         return (
-            <div {...this.getProps()}>
-                {this.props.children ? this.props.children : ''}
-                <a href="#">Close</a>
+            <div className={styles["wrapper"]}>
+                <div {...this.getProps()}>
+                    <span>
+                        {this.props.children ? this.props.children : ''}
+                    </span>
+                    <button>Close</button>
+                </div>
             </div>
         )
     }
