@@ -7,10 +7,6 @@
     transparentize($color, .9) 0 2rem 2rem -.5rem;
 }
 
-@mixin animation($direction) {
-    animation: animation .4s cubic-bezier(.5,0,0,1) 0s 1 $direction both;
-}
-
 .wrapper {
     bottom: 0;
     display: flex;
@@ -19,10 +15,9 @@
     width: 100%;
 }
 .toast {
-    @include animation(reverse);
     @include fill($gray4);
     align-items: center;
-    border-radius: .5rem;
+    border-radius: .25rem;
     color: transparentize($white, .2);
     display: none;
     margin: 0 auto 2.5rem;
@@ -31,9 +26,6 @@
     position: relative;
     &:focus {
         outline: none;
-    }
-    &:hover {
-        animation-play-state: paused;
     }
     span {
         border-right: 1px solid transparentize($white, .8);
@@ -58,7 +50,7 @@
         }
     }
     &.open {
-        @include animation(normal);
+        animation: animation 2.8s cubic-bezier(.5,0,0,1) 0s 2 alternate forwards;
         display: flex;
     }
     &.primary {
@@ -89,7 +81,7 @@
         opacity: 0;
         transform: translateY(2rem);
     }
-    100% {
+    14% {
         opacity: 1;
         transform: translateY(0);
     }
@@ -97,8 +89,7 @@
 
 @media (max-width: 30rem) {
     .toast {
-        border-radius: 0;
-        margin-bottom: 0;
+        margin: 1rem;
         width: 100%;
     }
 }
