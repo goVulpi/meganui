@@ -18,7 +18,12 @@ export default class ToastStory extends Component {
         action('toast open');
         this.setState({
             openToast: true
-        })
+        });
+        setTimeout(() => {
+            this.setState({
+                openToast: false
+            })
+        }, 5600);
     };
 
     handleToastCloseButtonClick = () => {
