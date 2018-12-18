@@ -19,8 +19,8 @@
     width: 100%;
 }
 .toast {
-    @include fill($gray4);
     @include animation(reverse);
+    @include fill($gray4);
     align-items: center;
     border-radius: .5rem;
     color: transparentize($white, .2);
@@ -29,24 +29,33 @@
     max-width: 30rem;
     padding: 1rem 2rem;
     position: relative;
+    &:focus {
+        outline: none;
+    }
     &:hover {
         animation-play-state: paused;
     }
     span {
         border-right: 1px solid transparentize($white, .8);
+        flex: 1;
         margin-right: 2rem;
         padding-right: 2rem;
     }
     button {
         background: none;
         border: none;
-        color: $white;
+        color: transparentize($white, .2s);
         cursor: pointer;
         font-size: .75rem;
         font-weight: bold;
         padding: 0;
         text-transform: uppercase;
         text-decoration: none;
+        transition: color var(--transition-base);
+        &:hover, &:focus {
+            color: $white;
+            outline: none;
+        }
     }
     &.open {
         @include animation(normal);
