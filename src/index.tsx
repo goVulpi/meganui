@@ -5,6 +5,7 @@ import Heading from './Heading';
 import Hiperlink from './Hiperlink';
 import Image from './Image';
 import Label from './Label';
+import Loading from './Loading';
 import NameInput from './NameInput';
 import PasswordInput from './PasswordInput';
 import Position from './Position';
@@ -24,6 +25,7 @@ export {
   Hiperlink,
   Image,
   Label,
+  Loading,
   NameInput,
   PasswordInput,
   Position,
@@ -44,6 +46,7 @@ export default {
   Hiperlink,
   Image,
   Label,
+  Loading,
   NameInput,
   PasswordInput,
   Position,

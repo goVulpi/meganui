@@ -1,0 +1,62 @@
+@import '../_vars.scss';
+
+@mixin colorfullBackgroud() {
+    background: linear-gradient(90deg, $blue, lighten($purple, 15%), $pink, lighten($purple, 15%), $blue);    
+    background-size: 500%;
+}
+@keyframes loadingBarEnter {
+    0% {
+        transform:scaleX(0);
+    }
+    100% {
+        transform:scaleX(1);
+    }
+}
+@keyframes loadingBarIcon {
+    0% {
+        transform:scaleX(0);
+    }
+    50% {
+        transform:scaleX(1);
+    }
+    100% {
+        transform:translateX(100%);
+    }
+}
+@keyframes loadingBarProgress {
+    0% {
+        background-position:0% 0;
+    }
+    100% {
+        background-position:125% 0;
+    }
+}
+.loading {
+    @include colorfullBackgroud();
+    animation: loadingBarProgress 2s linear infinite, loadingBarEnter 2s ease-out;
+    height: calc(var(--layout-base)/4);
+    position: absolute;
+    top: 0;
+    transform-origin: left;
+    width: 100%;
+    &.icon {
+        animation: none;
+        background: $gray7;
+        border-radius: calc(var(--layout-base)/2);
+        height: calc(var(--layout-base)/4);
+        overflow: hidden;
+        right: 50%;
+        top: 50%;
+        width: calc(var(--layout-base)*8);
+        &:after {
+            @include colorfullBackgroud();
+            animation: loadingBarProgress 2.4s linear infinite, loadingBarIcon 1.2s linear infinite;
+            border-radius: calc(var(--layout-base)/2);
+            content: '';
+            height: 100%;
+            position: absolute;
+            transform-origin: left;
+            width: 200%;
+        }
+    }
+}
