@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import ButtonStory from './Button';
 import LoadingStory from './Loading';
 import ToastStory from './Toast';
-import NavbarStory from "./NavBar";
+import NavbarStory from "./Navbar";
 
 storiesOf('Button', module).add('Buttons', () => <ButtonStory></ButtonStory>);
 storiesOf('Loading', module).add('Loadings', () => <LoadingStory></LoadingStory>);
