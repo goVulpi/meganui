@@ -1,24 +1,33 @@
 import * as React from 'react';
+import * as PropTypes from 'prop-types';
 import styles from './index.scss';
+import { colorPropValues } from '../constants';
 
 export type Props = {
-    type: string
+    color: string,
+    position: string
 };
 
-export default class Loading extends React.Component<Props> {
+export default class Navbar extends React.Component<Props> {
 
     constructor(props: any) {
         super(props);
     }
+    
+    static propTypes = {
+        color: PropTypes.oneOf(colorPropValues),
+    };
  
     getClassNames() {
-        let classNames : string[] = [styles["nav"]];
+        let classNames : string[] = [styles["navbar"]];
 
         const {
-            type,
+            color,
+            position
         } = this.props;
 
-        (typeof type === 'string') ? classNames.push(styles[type]) : Function.prototype();
+        (typeof position === 'string') ? classNames.push(styles[position]) : Function.prototype();
+        (typeof color === "string") ? classNames.push(styles[color]) : Function.prototype();
 
         return classNames.join(" ");
     }

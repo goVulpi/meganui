@@ -9,7 +9,7 @@ import Loading from './Loading';
 import MenuList from './MenuList';
 import MenuItem from './MenuItem';
 import NameInput from './NameInput';
-import NavBar from './NavBar';
+import Navbar from './Navbar';
 import PasswordInput from './PasswordInput';
 import Position from './Position';
 import Spacing from './Spacing';
@@ -32,7 +32,7 @@ export {
   MenuList,
   MenuItem,
   NameInput,
-  NavBar,
+  Navbar,
   PasswordInput,
   Position,
   Spacing,
@@ -56,7 +56,7 @@ export default {
   MenuList,
   MenuItem,
   NameInput,
-  NavBar,
+  Navbar,
   PasswordInput,
   Position,
   Spacing,

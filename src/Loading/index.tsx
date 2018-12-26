@@ -5,7 +5,7 @@ export type Props = {
     type: string
 };
 
-export default class NavBar extends React.Component<Props> {
+export default class Loading extends React.Component<Props> {
 
     constructor(props: any) {
         super(props);

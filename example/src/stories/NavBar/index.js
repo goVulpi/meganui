@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import { NavBar, MenuList, MenuItem, Button, Text, AppContainer } from "meganui";
+import { Navbar, MenuList, MenuItem, Button, Image, AppContainer } from "meganui";
 
-export default class NavBarStory extends Component {
+export default class NavbarStory extends Component {
 
     render() {
         return (
             <AppContainer>
-                <NavBar>
+                <Navbar position="fixed">
+                    <Image height={32} src="./logo.svg"/>
                     <MenuList>
                         <MenuItem>Hello</MenuItem>
                         <MenuItem>
@@ -15,7 +16,7 @@ export default class NavBarStory extends Component {
                             </Button>
                         </MenuItem>
                     </MenuList>
-                </NavBar>
+                </Navbar>
             </AppContainer>
         );
     }
