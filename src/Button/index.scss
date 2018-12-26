@@ -67,6 +67,9 @@
     &.warning {
         @include fill($yellow);
     }
+    &.transparent {
+        @include fill(transparent);
+    }
     &.big {
         padding: .6875rem 1.375rem;
         font-size: .875rem;
