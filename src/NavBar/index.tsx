@@ -5,14 +5,14 @@ export type Props = {
     type: string
 };
 
-export default class NavBar extends React.Component<Props> {
+export default class Loading extends React.Component<Props> {
 
     constructor(props: any) {
         super(props);
     }
  
     getClassNames() {
-        let classNames : string[] = [styles["loading"]];
+        let classNames : string[] = [styles["nav"]];
 
         const {
             type,
@@ -25,10 +25,9 @@ export default class NavBar extends React.Component<Props> {
 
     render() {
         return (
-            <span
-                className={this.getClassNames()}
-                tabIndex={-1}
-            ></span>
+            <nav className={this.getClassNames()}>
+                {this.props.children}
+            </nav>
         );
     }
 }

@@ -1,0 +1,12 @@
+@import '../_vars.scss';
+
+.nav {
+    align-items: center;
+    background: $white;
+    border-bottom: 1px solid $gray8;
+    display: flex;
+    justify-content: space-between;
+    min-height: calc(var(--layout-base)*8);
+    padding: .5rem 1rem;
+    width: 100%;
+}
