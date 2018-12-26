@@ -6,7 +6,10 @@ import Hiperlink from './Hiperlink';
 import Image from './Image';
 import Label from './Label';
 import Loading from './Loading';
+import MenuList from './MenuList';
+import MenuItem from './MenuItem';
 import NameInput from './NameInput';
+import Navbar from './Navbar';
 import PasswordInput from './PasswordInput';
 import Position from './Position';
 import Spacing from './Spacing';
@@ -26,7 +29,10 @@ export {
   Image,
   Label,
   Loading,
+  MenuList,
+  MenuItem,
   NameInput,
+  Navbar,
   PasswordInput,
   Position,
   Spacing,
@@ -47,7 +53,10 @@ export default {
   Image,
   Label,
   Loading,
+  MenuList,
+  MenuItem,
   NameInput,
+  Navbar,
   PasswordInput,
   Position,
   Spacing,
