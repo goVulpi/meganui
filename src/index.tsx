@@ -1,5 +1,6 @@
 import AppContainer from './components/AppContainer';
 import Button from './components/Button';
+import Column from './components/Column';
 import EmailInput from './components/EmailInput';
 import Heading from './components/Heading';
 import Hiperlink from './components/Hiperlink';
@@ -12,6 +13,7 @@ import NameInput from './components/NameInput';
 import Navbar from './components/Navbar';
 import PasswordInput from './components/PasswordInput';
 import Position from './components/Position';
+import Row from './components/Row';
 import Spacing from './components/Spacing';
 import SubmitButton from './components/SubmitButton';
 import TelInput from './components/TelInput';
@@ -23,6 +25,7 @@ import Toast from './components/Toast';
 export {
   AppContainer,
   Button,
+  Column,
   EmailInput,
   Heading,
   Hiperlink,
@@ -35,6 +38,7 @@ export {
   Navbar,
   PasswordInput,
   Position,
+  Row,
   Spacing,
   SubmitButton,
   TelInput,
@@ -59,6 +63,7 @@ export default {
   Navbar,
   PasswordInput,
   Position,
+  Row,
   Spacing,
   SubmitButton,
   TelInput,
