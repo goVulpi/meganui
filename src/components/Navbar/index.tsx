@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import styles from './index.scss';
-import { colorPropValues } from '../constants';
+import { colorPropValues } from '../../constants';
 
 export type Props = {
     color: string,
