@@ -1,13 +1,13 @@
-import Button, { Props } from "../Button";
+import Button, { ButtonAttributes, ButtonProps } from "../Button";
 
 export default class SubmitButton extends Button {
 
-    constructor(props: Props) {
+    constructor(props: ButtonProps) {
         super(props);
     }
 
-    getProps() {
-        return Object.assign(super.getProps(), {
+    protected getAttributes() : ButtonAttributes {
+        return Object.assign(super.getAttributes(), {
             "type": "submit"
         });
     }
