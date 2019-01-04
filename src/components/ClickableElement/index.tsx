@@ -10,7 +10,6 @@ import styles from './index.scss';
 export interface ClickableElementProps {
     block: boolean,
     color: string,
-    onClick: ((event: React.MouseEvent<HTMLButtonElement>) => void) | undefined,
     outlined: boolean,
     size: string
 };

@@ -8,6 +8,7 @@ import ClickableElement, { ClickableElementAttributes, ClickableElementProps } f
 
 export interface ButtonProps extends ClickableElementProps {
     disabled: boolean,
+    onClick: ((event: React.MouseEvent<HTMLButtonElement>) => void) | undefined,
     type: string
 };
 
@@ -23,10 +24,10 @@ export default class Button extends ClickableElement<ButtonProps> {
     }
 
     static propTypes = Object.assign(ClickableElement.propTypes, {
-        disabled: PropTypes.bool
+        "disabled": PropTypes.bool
     });
 
-    protected getDefaultClassName() {
+    protected getDefaultClassName() : string {
         return "button";
     }
 
@@ -40,10 +41,11 @@ export default class Button extends ClickableElement<ButtonProps> {
     }
 
     render() {
-        const { onClick } = this.props;
+        const { children, onClick } = this.props;
         return (
-        <button {...this.getAttributes()} onClick={onClick}>
-            {this.props.children ? this.props.children : ''}
+        <button {...this.getAttributes()}
+            onClick={onClick}>
+            {children ? children : ''}
         </button>
         )
     }
