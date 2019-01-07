@@ -78,7 +78,7 @@
             outline: 0 none;
         }
         &:hover {
-            background: lighten($white, 5%);
+            background: transparentize($white, .9);
             text-decoration: none;
         }
     }
