@@ -10,6 +10,7 @@
     }
     &:hover {
         background: lighten($color, 5%);
+        text-decoration: none;
     }
     &:disabled {
         cursor: default;
@@ -41,7 +42,7 @@
     line-height: 1;
     padding: .5rem 1rem;
     position: relative;
-    text-decoration: none;
+    text-align: center;
     transition: .2s;
     &.block {
         display: block;
@@ -69,7 +70,17 @@
         @include fill($yellow);
     }
     &.transparent {
-        @include fill(transparent);
+        background: none;
+        border: var(--border-width) solid transparent;
+        color: $white;
+        &:focus {
+            box-shadow: 0 0 0 calc(var(--layout-base)*.5) transparentize($white, .6);
+            outline: 0 none;
+        }
+        &:hover {
+            background: lighten($white, 5%);
+            text-decoration: none;
+        }
     }
     &.big {
         padding: .6875rem 1.375rem;
