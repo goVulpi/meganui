@@ -3,7 +3,8 @@ import styles from "./index.scss";
 
 export type Props = {
     color: string,    
-    level: number
+    level: number,
+    size: string
 };
 
 export default class Heading extends React.Component<Props> {
@@ -15,10 +16,14 @@ export default class Heading extends React.Component<Props> {
     getClassNames() : string {
 
         let classNames : string[] = [];
-        const {color} = this.props;
+        const {
+            color,
+            size
+        } = this.props;
         const colorPrefix : string = "text-";
 
         ("string" === typeof color) ? classNames.push(styles[colorPrefix.concat(color)]) : Function.prototype();
+        ("string" === typeof size) ? classNames.push(styles[colorPrefix.concat(size)]) : Function.prototype();
 
         return classNames.join(" ");
 
