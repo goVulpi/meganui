@@ -51,7 +51,17 @@
     &:valid, &.success {
         @include text-input-state($green);
     }
-
+    .transparent {
+        background: none;
+        border-color: $gray8;
+        @include placeholder($gray8);
+        &:hover, &:focus {
+            @include placeholder($white);
+        }
+        &:hover {
+            border-color: $white;
+        }
+    }
     form:focus-within &:invalid, form:hover &:invalid {
         &:focus, &:hover {
             @include text-input-state($red);

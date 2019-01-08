@@ -31,6 +31,12 @@
         }
     }
 }
+a {
+    color: $blue;
+    &:visited {
+        color: $purple;
+    }
+}
 .button {
     @include fill($gray4);    
     border-radius: 4rem;

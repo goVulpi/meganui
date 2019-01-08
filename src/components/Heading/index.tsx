@@ -23,7 +23,7 @@ export default class Heading extends React.Component<Props> {
         const colorPrefix : string = "text-";
 
         ("string" === typeof color) ? classNames.push(styles[colorPrefix.concat(color)]) : Function.prototype();
-        ("string" === typeof size) ? classNames.push(styles[colorPrefix.concat(size)]) : Function.prototype();
+        ("string" === typeof size) ? classNames.push(styles[size]) : Function.prototype();
 
         return classNames.join(" ");
 
