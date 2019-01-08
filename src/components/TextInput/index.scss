@@ -51,7 +51,7 @@
     &:valid, &.success {
         @include text-input-state($green);
     }
-    .transparent {
+    &.transparent {
         background: none;
         border-color: $gray8;
         @include placeholder($gray8);
