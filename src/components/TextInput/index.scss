@@ -53,13 +53,14 @@
     }
     &.transparent {
         background: none;
-        border-color: $gray8;
-        @include placeholder($gray8);
+        border-color: transparentize($white, .8);
+        color: $white;
+        @include placeholder(transparentize($white, .4));
         &:hover, &:focus {
             @include placeholder($white);
         }
         &:hover {
-            border-color: $white;
+            border-color: transparentize($white, .6);
         }
     }
     form:focus-within &:invalid, form:hover &:invalid {
