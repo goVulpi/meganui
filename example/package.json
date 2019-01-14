@@ -2,7 +2,7 @@
   "name": "meganui-example",
   "homepage": "https://govulpi.github.io/meganui",
   "author": "vulpi",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "private": false,
   "devDependencies": {
