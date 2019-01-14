@@ -2,14 +2,17 @@ import * as React from 'react';
 import styles from './index.scss';
 
 export type Props = {
-    id: string,
+    children?: string,
     color: string,
     hint: string,
-    onChange: ((event: React.ChangeEvent<HTMLInputElement>) => void),
+    id: string,
     labelledBy: string,
+    onChange: ((event: React.ChangeEvent<HTMLInputElement>) => void),
+    multiline: boolean,
     required: boolean,
     requirementsText: string,
     size: string
+    value?: string
 };
 
 export default class TextInput extends React.Component<Props> {
@@ -44,10 +47,18 @@ export default class TextInput extends React.Component<Props> {
     }
 
     render() {
+        const { multiline } = this.props;
+
+        if(true === multiline) {
+            return (
+                <textarea onChange={this.props.onChange} {...this.getProps()}>
+                    {this.props.value}
+                </textarea>
+            );
+        }
+
+        return <input onChange={this.props.onChange} value={this.props.value} {...this.getProps()} />
         
-        return (
-            <input onChange={this.props.onChange} {...this.getProps()} />
-        );
     }
 
 }
