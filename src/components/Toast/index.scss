@@ -1,0 +1,94 @@
+@import '../_vars.scss';
+
+@mixin fill($color) {
+    background: $color;
+    box-shadow:
+    transparentize($black, .8) 0 1rem 1rem -.5rem, 
+    transparentize($color, .9) 0 2rem 2rem -.5rem;
+}
+.wrapper {
+    bottom: 0;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+.toast {
+    @include fill($gray4);
+    align-items: center;
+    border-radius: .25rem;
+    color: transparentize($white, .2);
+    display: none;
+    margin: 0 auto 2.5rem;
+    max-width: 30rem;
+    padding: 1rem 2rem;
+    position: relative;
+    &:focus {
+        outline: none;
+    }
+    span {
+        border-right: 1px solid transparentize($white, .8);
+        flex: 1;
+        margin-right: 2rem;
+        padding-right: 2rem;
+    }
+    button {
+        background: none;
+        border: none;
+        color: transparentize($white, .2s);
+        cursor: pointer;
+        font-size: .75rem;
+        font-weight: bold;
+        padding: 0;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: color var(--transition-base);
+        &:hover, &:focus {
+            color: $white;
+            outline: none;
+        }
+    }
+    &.open {
+        animation: toastEntrance 2.8s cubic-bezier(.5,0,0,1) 0s 2 alternate forwards;
+        display: flex;
+    }
+    &.primary {
+        @include fill($pink);
+    }
+    &.brand {
+        @include fill($purple);
+    }
+    &.secondary, &.info {
+        @include fill($blue);
+    }
+    &.danger {
+        @include fill($red);
+    }
+    &.dark {
+        @include fill($gray1);
+    }
+    &.success {
+        @include fill($green)
+    }
+    &.warning {
+        @include fill($yellow);
+    }
+}
+
+@keyframes toastEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    14% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 30rem) {
+    .toast {
+        margin: 1rem;
+        width: 100%;
+    }
+}

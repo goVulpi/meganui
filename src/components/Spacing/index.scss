@@ -1,0 +1,41 @@
+@mixin spacing-size($size) {
+    &.top {
+        margin-top: calc(var(--layout-base)*#{$size});
+    }
+    &.right {
+        margin-right: calc(var(--layout-base)*#{$size});
+    }
+    &.bottom {
+        margin-bottom: calc(var(--layout-base)*#{$size});
+    }     
+    &.left {
+        margin-left: calc(var(--layout-base)*#{$size});
+    }
+}
+.spacing {
+    display: block;
+    @include spacing-size(1);
+    &.big {
+        @include spacing-size(2);
+    }
+    &.bigger {
+        @include spacing-size(3);
+    }
+    &.biggest {
+        @include spacing-size(4);
+    }
+    &.auto {
+        &.top {
+            margin-top: auto;
+        }
+        &.right {
+            margin-right: auto;
+        }
+        &.bottom {
+            margin-bottom: auto;
+        }     
+        &.left {
+            margin-left: auto;
+        }
+    }
+}

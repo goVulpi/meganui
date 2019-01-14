@@ -1,0 +1,39 @@
+@import '../_vars.scss';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Ubuntu:300,300i,400,400i,500,500i,700,700i';
+
+:root {
+  --border-width: 2px;
+  --layout-base: 8px;
+  --transition-base: .2s;
+
+  --primary-font: 'Ubuntu', sans-serif;
+  --general-font: 'Open Sans', sans-serif;
+  
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  
+  font-size: calc(var(--layout-base)*2);
+}
+
+@mixin box-sizing($property) {
+  -webkit-box-sizing: $property;
+     -moz-box-sizing: $property;
+          box-sizing: $property;
+}
+
+*, *:before, *:after {
+  @include box-sizing(border-box);
+}
+
+body, .app-container {
+  background: $gray9;
+  color: $gray4;
+  font-family: var(--general-font);
+}
+
+body {
+  font-size: .875rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}

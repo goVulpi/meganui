@@ -1,0 +1,57 @@
+{
+  "name": "meganui-example",
+  "homepage": "https://govulpi.github.io/meganui",
+  "author": "vulpi",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@storybook/addon-actions": "^4.1.2",
+    "@storybook/addon-links": "^4.1.2",
+    "@storybook/addons": "^4.1.2",
+    "@storybook/react": "^4.1.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "^6.26.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-preset-env": "^1.7.0",
+    "meganui": "file:..",
+    "node-sass": "^4.10.0",
+    "prop-types": "^15.6.2",
+    "query-string": "^6.2.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.1"
+  },
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "prepare": "npm run build",
+    "build-storybook": "build-storybook -s public",
+    "export-storybook": "build-storybook -c .storybook -o .out",
+    "deploy": "storybook-to-ghpages",
+    "predeploy": "npm install && npm run build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
