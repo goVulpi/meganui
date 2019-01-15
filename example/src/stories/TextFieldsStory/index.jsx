@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, TextInput } from "meganui";
+import { Row, TextInput, DropDownList, SubmitButton } from "meganui";
 
 export default class TextFieldsStory extends React.PureComponent {
   render() {
@@ -22,6 +22,21 @@ export default class TextFieldsStory extends React.PureComponent {
         </Row>
         <Row>
           <TextInput multiline size="big" value="Big multiline input" />
+        </Row>
+        <Row>
+          <DropDownList
+            options={[{ name: "This is a dropdown", value: "with-a-value" }]}
+          />
+        </Row>
+        <Row>
+          <form>
+          <DropDownList
+          hint="Select..."
+            options={[{ name: "This is a required dropdown", value: "with-a-value" }]}
+            required
+          />
+          <SubmitButton>Try me</SubmitButton>
+          </form>
         </Row>
       </>
     );
