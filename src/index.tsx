@@ -1,7 +1,11 @@
 import AppContainer from './components/AppContainer';
+import BigFooter from './components/BigFooter';
 import Button from './components/Button';
 import Column from './components/Column';
 import EmailInput from './components/EmailInput';
+import FooterNavLink from './components/FooterNavLink';
+import FooterNavMenu from './components/FooterNavMenu';
+import FooterNavTitle from './components/FooterNavTitle';
 import Heading from './components/Heading';
 import Hiperlink from './components/Hiperlink';
 import Image from './components/Image';
@@ -24,9 +28,13 @@ import Toast from './components/Toast';
 // export components as named exports
 export {
   AppContainer,
+  BigFooter,
   Button,
   Column,
   EmailInput,
+  FooterNavLink,
+  FooterNavMenu,
+  FooterNavTitle,
   Heading,
   Hiperlink,
   Image,
@@ -50,8 +58,12 @@ export {
 // set a default export for this module
 export default {
   AppContainer,
+  BigFooter,
   Button,
   EmailInput,
+  FooterNavLink,
+  FooterNavMenu,
+  FooterNavTitle,
   Heading,
   Hiperlink,
   Image,

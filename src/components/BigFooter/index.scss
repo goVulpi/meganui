@@ -1,0 +1,13 @@
+@import "../_vars.scss";
+
+.big-footer {
+  background: radial-gradient(circle, transparent, $black), darken($purple, 20%);
+  background-attachment: fixed;
+  color: $white;
+  margin-top: 2rem;
+  padding: 4rem 0;
+  hr {
+    border-top: 1px solid $white;
+    mix-blend-mode: overlay;
+  }
+}

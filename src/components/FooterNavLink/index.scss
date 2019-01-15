@@ -1,0 +1,18 @@
+@import "../_vars.scss";
+
+.footer-nav-list-item {
+  padding-bottom: 12px;
+  a {
+    &,
+    &:link,
+    &:visited {
+      color: transparentize($white, 0.1);
+      transition: color 0.2s;
+    }
+    &:focus,
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}

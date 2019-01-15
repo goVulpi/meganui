@@ -7,15 +7,17 @@ import * as PropTypes from "prop-types";
 import ClickableElement, { ClickableElementAttributes, ClickableElementProps } from "../ClickableElement";
 
 export interface HiperlinkProps extends ClickableElementProps {
-    button: boolean,
+    button?: boolean,
     href: string,
-    onClick: ((event: React.MouseEvent<HTMLAnchorElement>) => void) | undefined,
-    target: string
+    onClick?: ((event: React.MouseEvent<HTMLAnchorElement>) => void) | undefined,
+    itemProp?: string,
+    target?: string
 }
 
 export interface HiperlinkAttributes extends ClickableElementAttributes {
     href: string,
-    target: string
+    itemProp?: string,
+    target?: string
 }
 
 export default class Hiperlink extends ClickableElement<HiperlinkProps> {
@@ -35,10 +37,11 @@ export default class Hiperlink extends ClickableElement<HiperlinkProps> {
     } 
 
     protected getAttributes() : HiperlinkAttributes {
-        const { href, target } = this.props;
+        const { href, itemProp, target } = this.props;
 
         return Object.assign(super.getAttributes(), {
            "href":  href,
+           "itemProp": itemProp,
            "target": target
         });
     }   

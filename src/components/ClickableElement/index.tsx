@@ -8,14 +8,14 @@ import { colorPropValues, sizePropValues } from "../../constants";
 import styles from './index.scss';
 
 export interface ClickableElementProps {
-    block: boolean,
-    color: string,
-    outlined: boolean,
-    size: string
+    block?: boolean,
+    color?: string,
+    outlined?: boolean,
+    size?: string
 };
 
 export interface ClickableElementAttributes {
-    className: string,
+    className?: string,
     tabIndex: number
 }
 
