@@ -11,12 +11,14 @@ export interface HiperlinkProps extends ClickableElementProps {
     href: string,
     onClick?: ((event: React.MouseEvent<HTMLAnchorElement>) => void) | undefined,
     itemProp?: string,
+    rel?: string,
     target?: string
 }
 
 export interface HiperlinkAttributes extends ClickableElementAttributes {
     href: string,
     itemProp?: string,
+    rel?: string,
     target?: string
 }
 

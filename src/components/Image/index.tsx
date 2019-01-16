@@ -5,6 +5,7 @@ export type Props = {
     alt: string,
     fluid: boolean,
     height: string,
+    itemProp: string,
     size: string,
     src: string,
     thumbnail: boolean,
@@ -34,13 +35,14 @@ export default class Image extends React.Component<Props> {
     }
 
     render() {
-        const { alt, src, height, width } = this.props;
+        const { alt, src, height, itemProp, width } = this.props;
         return (
             <img
                 alt={alt}
                 className={this.getClassNames()}
                 draggable={false}
                 height={height}
+                itemProp={itemProp}
                 src={src}
                 tabIndex={-1}
                 width={width}
