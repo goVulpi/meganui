@@ -2,6 +2,7 @@ import * as React from "react";
 import styles from "../TextInput/index.scss";
 
 export type Props = {
+  defaultValue?: string | string[];
   hint?: string;
   id?: string;
   labelledBy?: string;
@@ -18,7 +19,7 @@ export default class DropDownList extends React.PureComponent<Props> {
 
   renderOption(name: string, value: string) {
     return (
-      <option key={value} title={name} value={value}>
+      <option title={name} value={value}>
         {name}
       </option>
     );
@@ -26,6 +27,7 @@ export default class DropDownList extends React.PureComponent<Props> {
 
   render() {
     const {
+      defaultValue,
       hint,
       id,
       labelledBy,
@@ -36,9 +38,10 @@ export default class DropDownList extends React.PureComponent<Props> {
     } = this.props;
     return (
       <select
-        aria-labelledBy={labelledBy}
+        aria-labelledby={labelledBy}
         aria-required={required}
         className={styles["text-input"]}
+        defaultValue={defaultValue}
         onChange={onChange}
         id={id}
         name={id}
@@ -46,10 +49,16 @@ export default class DropDownList extends React.PureComponent<Props> {
         title={hint}
         value={value}
       >
-      {hint && <option disabled selected value="">{hint}</option>}
-        {options.map((option: any) =>
-          this.renderOption(option.name, option.value)
+        {hint && (
+          <option disabled value="">
+            {hint}
+          </option>
         )}
+        {options.map((option: any) => (
+          <React.Fragment key={option.value}>
+            {this.renderOption(option.name, option.value)}
+          </React.Fragment>
+        ))}
       </select>
     );
   }
