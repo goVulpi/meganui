@@ -1,6 +1,7 @@
 import AppContainer from './components/AppContainer';
 import BigFooter from './components/BigFooter';
 import Button from './components/Button';
+import Card from './components/Card';
 import Column from './components/Column';
 import DropDownList from './components/DropDownList';
 import EmailInput from './components/EmailInput';
@@ -31,6 +32,7 @@ export {
   AppContainer,
   BigFooter,
   Button,
+  Card,
   Column,
   DropDownList,
   EmailInput,
@@ -62,6 +64,7 @@ export default {
   AppContainer,
   BigFooter,
   Button,
+  Card,
   DropDownList,
   EmailInput,
   FooterNavLink,

@@ -2,9 +2,10 @@ import * as React from 'react';
 import styles from "./index.scss";
 
 export type Props = {
-    color: string,    
-    level: number,
-    size: string
+    color?: string,
+    itemProp?: string,    
+    level?: number,
+    size?: string
 };
 
 export default class Heading extends React.Component<Props> {
@@ -30,7 +31,7 @@ export default class Heading extends React.Component<Props> {
     }
 
     render() {
-        const { level } = this.props;
+        const { itemProp, level } = this.props;
         const levelNumber : number = level ? level : 1;
 
         /**
@@ -38,10 +39,16 @@ export default class Heading extends React.Component<Props> {
          */
         const TagName : string = `h${levelNumber}`;
 
-        return (<TagName className={this.getClassNames()}>{this.props.children ? this.props.children : ''}</TagName>);
+        return (<TagName itemProp={itemProp} className={this.getClassNames()}>{this.props.children ? this.props.children : ''}</TagName>);
+    }
+
+    static defaultProps = {
+        level: 1
     }
 
 }
+
+
 
 /*
 TODO: bring it back to Component

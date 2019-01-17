@@ -2,6 +2,7 @@ import React from "react";
 
 import { storiesOf } from "@storybook/react";
 import ButtonStory from "./ButtonStory";
+import CardStory from "./CardStory";
 import FooterStory from "./FooterStory";
 import GridStory from "./GridStory";
 import LoadingStory from "./LoadingStory";
@@ -12,6 +13,7 @@ import ImagesAndLinksStory from "./ImagesAndLinksStory";
 // import { linkTo } from '@storybook/addon-links';
 
 storiesOf("Button", module).add("Buttons", () => <ButtonStory />);
+storiesOf("Card", module).add("Card", () => <CardStory></CardStory>);
 storiesOf("Footer", module).add("Footer", () => <FooterStory />);
 storiesOf("Grid", module).add("Grid", () => <GridStory />);
 storiesOf("Images and links", module).add("Images and links", () => <ImagesAndLinksStory/>)
