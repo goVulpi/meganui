@@ -1,9 +1,12 @@
+@import "../_vars.scss";
+
 .card-title {
   font-size: calc(var(--layout-base) * 2.25); /* 18px if --layout-base is 8px */
   font-family: var(--general-font);
   font-weight: 400;
   margin-bottom: 0.5rem;
-  .card-title-link {
+  a:link, a:visited, .hiperlink {
+    color: $black;
     text-decoration: none;
     &:after {
       bottom: 0;

@@ -1,19 +1,24 @@
 @import "../_vars.scss";
 
 .card {
-  background-color: $white;
-  border-radius: 12px;
-  color: initial;
-  border: 1px solid $gray8;
-  padding: 3rem 2.5rem 3rem 2.5rem;
-  position: relative;
-  text-decoration: none;
-  transition: box-shadow 0.4s ease-out, transform 0.2s ease-out;
   &,
   & .content {
     display: flex;
     flex-direction: column;
   }
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  background-color: $white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px 0 $gray8, 0 0 0 1px $gray8;
+  color: initial;
+  min-height: 0;
+  max-width: 100%;
+  min-width: calc(var(--layout-base)*36);
+  padding: 3rem 2.5rem 3rem 2.5rem;
+  position: relative;
+  text-decoration: none;
+  transition: box-shadow 0.4s ease-out, transform 0.2s ease-out;
   &.centered {
     align-items: center;
     text-align: center;
@@ -40,7 +45,6 @@
 }
 
 .interactive-card {
-  border-width: 0px;
   cursor: pointer;
   box-shadow: transparentize($black, 0.95) 0 2px 24px;
 
@@ -53,8 +57,8 @@
       transparentize($black, 0.95) 0px 8px 8px,
       transparentize($purple, 0.95) 0px 16px 16px,
       transparentize($purple, 0.95) 0px 32px 32px;
-    a:focus {
-      text-decoration: none;
+    a:link, a:visited, .hiperlink {
+      text-decoration: underline;
     }
   }
 }
