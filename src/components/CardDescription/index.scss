@@ -1,0 +1,18 @@
+.card-description {
+    font-size: calc(var(--layout-base) * 1.75);
+    min-height: calc(var(--layout-base) * 8);
+}
+
+@mixin multilineEllipsis($lineClamp, $fontSize, $maxWidth, $maxHeight) {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lineClamp;
+    display: block;
+    display: -webkit-box;
+    font-size: $fontSize;
+    line-height: 1.4;
+    margin: 0 auto;
+    max-height: $maxHeight;
+    max-width: $maxWidth;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
