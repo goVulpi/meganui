@@ -1,0 +1,60 @@
+@import "../_vars.scss";
+
+.card {
+  background-color: $white;
+  border-radius: 12px;
+  color: initial;
+  border: 1px solid $gray8;
+  padding: 3rem 2.5rem 3rem 2.5rem;
+  position: relative;
+  text-decoration: none;
+  transition: box-shadow 0.4s ease-out, transform 0.2s ease-out;
+  &,
+  & .content {
+    display: flex;
+    flex-direction: column;
+  }
+  &.centered {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .content {
+    flex-grow: 1;
+    & > :last-child {
+      margin-top: auto;
+    }
+  }
+}
+
+.small-vertical-space {
+  margin: 1rem 0;
+}
+
+.medium-vertical-space {
+  margin: 2rem 0;
+}
+
+.large-vertical-space {
+  margin: 3rem 0;
+}
+
+.interactive-card {
+  border-width: 0px;
+  cursor: pointer;
+  box-shadow: transparentize($black, 0.95) 0 2px 24px;
+
+  &:focus-within, &:hover {
+    color: initial;
+    text-decoration: none;
+    transform: translateY(-3px);
+    box-shadow: transparentize($black, 0.95) 0px 2px 2px,
+      transparentize($black, 0.95) 0px 4px 4px,
+      transparentize($black, 0.95) 0px 8px 8px,
+      transparentize($purple, 0.95) 0px 16px 16px,
+      transparentize($purple, 0.95) 0px 32px 32px;
+    a:focus {
+      text-decoration: none;
+    }
+  }
+}

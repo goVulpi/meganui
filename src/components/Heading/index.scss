@@ -1,4 +1,6 @@
 @import '../_vars.scss';
+$break-small: 320px;
+$decrease: 0.75;
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--primary-font);
@@ -8,23 +10,30 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+@mixin headingSize($baseSize: 1rem) {
+    font-size: $baseSize;
+    @media screen and (max-width: $break-small) {
+        font-size: $baseSize - $decrease;
+    }
+}
+
 h1, .h1 {
-    font-size: 3rem;
+    @include headingSize(3rem);
 }
 h2, .h2 {
-    font-size: 2.5rem;
+    @include headingSize(2.5rem);
 }
 h3, .h3 {
-    font-size: 2rem;
+    @include headingSize(2rem);
 }
 h4, .h4 {
-    font-size: 1.5rem;
+    @include headingSize(1.5rem);
 }
 h5, .h5 {
-    font-size: 1.25rem;
+    @include headingSize(1.25rem);
 }
 h6, .h6 {
-    font-size: 1rem;
+    @include headingSize(1rem);
 }
 .text {
     &-primary {

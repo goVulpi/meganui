@@ -1,0 +1,17 @@
+@import "../_vars.scss";
+
+.avatar-container {
+  background-color: $gray6;
+  /* border-radius: 30px; */
+  border-radius: 50%;
+  display: flex;
+  height: calc(var(--layout-base) * 8);
+  margin: 0 auto calc(var(--layout-base) * 2) auto;
+  overflow: hidden;
+  width: calc(var(--layout-base) * 8);
+  img {
+    margin: auto;
+    // prevents overflow
+    max-width: 100%;
+  }
+}

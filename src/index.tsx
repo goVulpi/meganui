@@ -1,6 +1,11 @@
 import AppContainer from './components/AppContainer';
+import AvatarImage from './components/AvatarImage';
 import BigFooter from './components/BigFooter';
 import Button from './components/Button';
+import Card from './components/Card';
+import CardDescription from './components/CardDescription';
+import CardSubtitle from './components/CardSubtitle';
+import CardTitle from './components/CardTitle';
 import Column from './components/Column';
 import DropDownList from './components/DropDownList';
 import EmailInput from './components/EmailInput';
@@ -29,8 +34,13 @@ import Toast from './components/Toast';
 // export components as named exports
 export {
   AppContainer,
+  AvatarImage,
   BigFooter,
   Button,
+  Card,
+  CardDescription,
+  CardSubtitle,
+  CardTitle,
   Column,
   DropDownList,
   EmailInput,
@@ -60,8 +70,13 @@ export {
 // set a default export for this module
 export default {
   AppContainer,
+  AvatarImage,
   BigFooter,
   Button,
+  Card,
+  CardDescription,
+  CardSubtitle,
+  CardTitle,
   DropDownList,
   EmailInput,
   FooterNavLink,

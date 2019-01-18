@@ -1,3 +1,21 @@
 .column {
     flex: 1;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.small-horizontal-gap {
+    margin-left: var(--layout-base);
+    margin-right: var(--layout-base)
+}
+
+.medium-horizontal-gap {
+    margin-left: calc(var(--layout-base)*2);
+    margin-right: calc(var(--layout-base)*2);
+}
+
+.big-horizontal-gap {
+    margin-left: calc(var(--layout-base)*3);
+    margin-right: calc(var(--layout-base)*3);
 }
