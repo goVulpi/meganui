@@ -40,7 +40,9 @@ export default {
     ),
     url(),
     svgr(),
-    resolve(),
+    resolve({
+      preferBuiltins: true
+    }),
     typescript({
       rollupCommonJSResolveHack: true,
       clean: true
