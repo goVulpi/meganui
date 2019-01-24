@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import Heading from './Heading';
+import Heading from './components/Heading';
 
 describe("Heading", () => {
   it("is truthy", () => {
@@ -11,4 +11,4 @@ describe("Heading", () => {
     ReactDOM.render(<Heading level={1}/>, div);
     ReactDOM.unmountComponentAtNode(div);
   })
-});
+}); 
