@@ -11,4 +11,4 @@ describe("Heading", () => {
     ReactDOM.render(<Heading level={1}/>, div);
     ReactDOM.unmountComponentAtNode(div);
   })
-}); 
+});  
