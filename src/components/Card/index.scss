@@ -30,6 +30,29 @@
       margin-top: auto;
     }
   }
+
+  &.primary {
+      @include fill($pink);
+  }
+  &.brand {
+      @include fill($purple);
+  }
+  &.secondary, &.info {
+      @include fill($blue);
+  }
+  &.danger {
+      @include fill($red);
+  }
+  &.dark {
+      @include fill($gray1);
+  }
+  &.success {
+      @include fill($green)
+  }
+  &.warning {
+      @include fill($yellow);
+  }
+
 }
 
 .small-vertical-space {

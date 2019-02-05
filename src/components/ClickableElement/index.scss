@@ -1,36 +1,5 @@
 @import '../_vars.scss';
 
-@mixin fill($color) {
-    background: $color;
-    border: var(--border-width) solid transparent;
-    color: $white;
-    &:focus {
-        box-shadow: 0 0 0 calc(var(--layout-base)*.5) transparentize($color, .6);
-        outline: 0 none;
-    }
-    &:hover {
-        background: lighten($color, 5%);
-        text-decoration: none;
-    }
-    &:disabled {
-        cursor: default;
-        opacity: .5;
-        &:hover {
-            background: $color;
-        }
-    }
-    &.outlined {
-        color: $color;
-        background: none;
-        background-color: transparent;
-        border: var(--border-width) solid;
-        &:hover {
-            color: $white;
-            background: $color;
-            border-color: $color;
-        }
-    }
-}
 .hiperlink {
     color: $blue;
     &:visited {

@@ -3,16 +3,20 @@ import styles from "./index.scss";
 
 export type Props = {
   centeredContent?: boolean;
+  color?: string,
   interactive?: boolean;
   verticalSpace?: string;
 };
 
 export default class Card extends React.PureComponent<Props> {
   getClassNames(): string {
-    const { centeredContent, interactive, verticalSpace } = this.props;
-    let classNames = [styles.card];
+    const { color, centeredContent, interactive, verticalSpace } = this.props;
+    let classNames = [styles["card"]];
     centeredContent === true
       ? classNames.push(styles["centered"])
+      : Function.prototype();
+    "string" === typeof color
+      ? classNames.push(styles[color])
       : Function.prototype();
     interactive === true
       ? classNames.push(styles["interactive-card"])
@@ -20,7 +24,7 @@ export default class Card extends React.PureComponent<Props> {
     if ("undefined" !== typeof verticalSpace) {
       const className = `${
         verticalSpace.length > 0 ? verticalSpace : "small"
-      }-vertical-space`;
+        }-vertical-space`;
       classNames.push(styles[className]);
     }
     return classNames.join(" ");

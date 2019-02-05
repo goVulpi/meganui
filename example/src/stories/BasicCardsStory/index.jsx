@@ -29,6 +29,29 @@ export default class BasicCardsStory extends React.Component {
             </Card>
           </Column>
         </Row>
+        <Heading level={2}>Coloured cards</Heading>
+        <Row>
+        <Column horizontalGapSize="small">
+            <Card color="brand" verticalSpace="small">Static card with brand background color</Card>
+          </Column>
+          <Column horizontalGapSize="small">
+            <Card color="primary" verticalSpace="small">Static card with primary background color</Card>
+          </Column>
+          <Column horizontalGapSize="small">
+            <Card color="secondary" verticalSpace="small">Static card with secondary background color</Card>
+          </Column>
+        </Row>
+        <Row>
+        <Column horizontalGapSize="small">
+            <Card color="success" verticalSpace="small">Static card with success background color</Card>
+          </Column>
+          <Column horizontalGapSize="small">
+            <Card color="warning" verticalSpace="small">Static card with warning background color</Card>
+          </Column>
+          <Column horizontalGapSize="small">
+            <Card color="danger" verticalSpace="small">Static card with danger background color</Card>
+          </Column>
+        </Row>
         <Heading level={2}>Cards with vertical spacing</Heading>
         <Row>
           <Column horizontalGapSize="small">

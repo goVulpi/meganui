@@ -18,7 +18,7 @@ export default class Image extends React.Component<Props> {
         super(props);
     }
  
-    getClassNames() {
+    getClassNames() : string {
         let classNames : string[] = [styles["image"]];
 
         const {
@@ -34,19 +34,23 @@ export default class Image extends React.Component<Props> {
         return classNames.join(" ");
     }
 
-    render() {
-        const { alt, src, height, itemProp, width } = this.props;
+    getAttributes() {
+        const { alt, height, itemProp, src, width } = this.props;
+        return {
+            alt: alt,
+            className: this.getClassNames(),
+            draggable: false,
+            height: height,
+            itemProp: "string" === typeof itemProp ? itemProp : 'image',
+            src: src,
+            tabIndex: -1,
+            width: width,
+        };
+    }
+
+    render() : JSX.Element {
         return (
-            <img
-                alt={alt}
-                className={this.getClassNames()}
-                draggable={false}
-                height={height}
-                itemProp={itemProp}
-                src={src}
-                tabIndex={-1}
-                width={width}
-            />
+            <img {...this.getAttributes()} />
         );
     }
 
