@@ -11,7 +11,7 @@
   background-color: $white;
   border-radius: 12px;
   box-shadow: 0 1px 3px 0 $gray8, 0 0 0 1px $gray8;
-  color: initial;
+  
   min-height: 0;
   max-width: 100%;
   min-width: calc(var(--layout-base)*36);
@@ -28,6 +28,12 @@
     flex-grow: 1;
     & > :last-child {
       margin-top: auto;
+    }
+  }
+
+  &.primary, &.brand, &.secondary, &.info, &.danger, &.success, &.warning, &.dark {
+    &, a:link, a:hover, a:visited, .hiperlink {
+      color: $white;
     }
   }
 
@@ -72,7 +78,6 @@
   box-shadow: transparentize($black, 0.95) 0 2px 24px;
 
   &:focus-within, &:hover {
-    color: initial;
     text-decoration: none;
     transform: translateY(-3px);
     box-shadow: transparentize($black, 0.95) 0px 2px 2px,
