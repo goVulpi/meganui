@@ -7,7 +7,7 @@ import CardDescription from './components/CardDescription';
 import CardSubtitle from './components/CardSubtitle';
 import CardTitle from './components/CardTitle';
 import Column from './components/Column';
-import DropDownList from './components/DropDownList';
+import DropDownList, { Option, OptionGroup } from './components/DropDownList';
 import EmailInput from './components/EmailInput';
 import FooterNavLink from './components/FooterNavLink';
 import FooterNavMenu from './components/FooterNavMenu';
@@ -56,6 +56,8 @@ export {
   MenuItem,
   NameInput,
   Navbar,
+  Option,
+  OptionGroup,
   PasswordInput,
   Position,
   Row,
@@ -91,6 +93,8 @@ export default {
   MenuItem,
   NameInput,
   Navbar,
+  Option,
+  OptionGroup,
   PasswordInput,
   Position,
   Row,

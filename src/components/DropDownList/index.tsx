@@ -1,8 +1,10 @@
 import * as React from "react";
+import Option from "./Option";
+import OptionGroup from "./OptionGroup";
 import styles from "../TextInput/index.scss";
 
 export type Props = {
-  color?: string,
+  color?: string;
   defaultValue?: string | string[];
   hint?: string;
   id?: string;
@@ -10,25 +12,20 @@ export type Props = {
   onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   options?: any;
   required?: boolean;
-  size?: string,
+  requirementsText?: string;
+  size?: string;
   value?: string | number | string[];
 };
+
+export { OptionGroup, Option };
 
 export default class DropDownList extends React.PureComponent<Props> {
   constructor(props: Props) {
     super(props);
   }
 
-  renderOption(name: string, value: string) {
-    return (
-      <option key={value} title={name} value={value}>
-        {name}
-      </option>
-    );
-  }
-
   getClassNames() {
-    const {color, size} = this.props;
+    const { color, size } = this.props;
     let classNames: string[] = [styles["text-input"]];
 
     typeof color === "string"
@@ -43,6 +40,7 @@ export default class DropDownList extends React.PureComponent<Props> {
 
   render() {
     const {
+      children,
       defaultValue,
       hint,
       id,
@@ -50,6 +48,7 @@ export default class DropDownList extends React.PureComponent<Props> {
       onChange,
       options,
       required,
+      requirementsText,
       value
     } = this.props;
     return (
@@ -62,17 +61,22 @@ export default class DropDownList extends React.PureComponent<Props> {
         id={id}
         name={id}
         required={required}
-        title={hint}
+        title={requirementsText ? requirementsText : hint}
         value={value}
       >
         {hint && (
-          <option disabled value="">
+          <option disabled={true} selected={true} value="">
             {hint}
           </option>
         )}
-        {options.map((option: any) =>
-          this.renderOption(option.name, option.value)
-        )}
+        {options.length > 0 && options.map((option: any) => (
+          <Option
+            key={option.value}
+            label={option.name}
+            internalValue={option.value}
+          />
+        ))}
+        {children}
       </select>
     );
   }

@@ -4,6 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Start Rollup",
             "type": "npm",
             "script": "start",
             "problemMatcher": [
@@ -12,6 +13,7 @@
             "isBackground": true
         },
         {
+            "label": "Start Storybook",
             "type": "npm",
             "script": "start",
             "path": "example/",
