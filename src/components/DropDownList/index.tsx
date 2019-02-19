@@ -51,6 +51,7 @@ export default class DropDownList extends React.PureComponent<Props> {
       requirementsText,
       value
     } = this.props;
+    console.log("Options", Array.isArray(options));
     return (
       <select
         aria-labelledby={labelledBy}
@@ -65,19 +66,31 @@ export default class DropDownList extends React.PureComponent<Props> {
         value={value}
       >
         {hint && (
-          <option disabled={true} selected={true} value="">
+          <option disabled={true} value="">
             {hint}
           </option>
         )}
-        {options.length > 0 && options.map((option: any) => (
-          <Option
-            key={option.value}
-            label={option.name}
-            internalValue={option.value}
-          />
-        ))}
+        {this.renderOptions()}
         {children}
       </select>
     );
+  }
+
+  renderOptions() {
+    const { options } = this.props;
+    if (
+      "undefined" === typeof options ||
+      !Array.isArray(options) ||
+      options.length < 1
+    ) {
+      return false;
+    }
+    return options.map((option: any) => (
+      <Option
+        key={option.value}
+        label={option.name}
+        internalValue={option.value}
+      />
+    ));
   }
 }
