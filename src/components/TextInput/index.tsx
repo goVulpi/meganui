@@ -7,6 +7,7 @@ export type Props = {
   hint: string;
   id: string;
   labelledBy: string;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   multiline?: boolean;
   required?: boolean;
@@ -61,9 +62,9 @@ export default class TextInput extends React.PureComponent<Props> {
   }
 
   renderMultiline() {
-    const { onChange, value } = this.props;
+    const { onBlur, onChange, value } = this.props;
     return (
-      <textarea onChange={onChange} {...this.getProps()}>
+      <textarea onBlur={onBlur} onChange={onChange} {...this.getProps()}>
         {value}
       </textarea>
     );
@@ -86,12 +87,13 @@ export default class TextInput extends React.PureComponent<Props> {
   }
 
   renderSingleLine() {
-    const { suggestedOptions } = this.props;
+    const { onBlur, onChange, suggestedOptions, value } = this.props;
     return (
       <React.Fragment>
         <input
-          onChange={this.props.onChange}
-          value={this.props.value}
+          onBlur={onBlur}
+          onChange={onChange}
+          value={value}
           {...this.getProps()}
         />
         {suggestedOptions && this.renderOptions()}

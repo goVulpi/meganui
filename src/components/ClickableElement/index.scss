@@ -1,73 +1,114 @@
-@import '../_vars.scss';
+@import "../_vars.scss";
 
 .hiperlink {
-    color: $blue;
-    &:visited {
-        color: $purple;
-    }
+  color: $blue;
+  &:visited {
+    color: $purple;
+  }
 }
 .button {
-    @include fill($gray4);    
-    border-radius: 4rem;
-    cursor: pointer;
-    display: inline-block;
-    font-family: var(--primary-font);
-    font-size: 0.75rem;
-    font-weight: bold;
-    line-height: 1;
-    padding: .5rem 1rem;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    transition: .2s;
-    &.block {
-        display: block;
-        width: 100%;
+  @include fill($gray4);
+  border-radius: 4rem;
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--primary-font);
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.5rem 1rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.2s;
+  &.block {
+    display: block;
+    width: 100%;
+  }
+  &.primary {
+    @include fill($pink);
+  }
+  &.brand {
+    @include fill($purple);
+  }
+  &.secondary,
+  &.info {
+    @include fill($blue);
+  }
+  &.danger {
+    @include fill($red);
+  }
+  &.dark {
+    @include fill($gray1);
+  }
+  &.success {
+    @include fill($green);
+  }
+  &.warning {
+    @include fill($yellow);
+  }
+  &.transparent {
+    background: none;
+    border: var(--border-width) solid transparent;
+    color: $white;
+    &:focus, &:active {
+      box-shadow: 0 0 0 calc(var(--layout-base) * 0.5)
+        transparentize($white, 0.6);
+      outline: 0 none;
     }
-    &.primary {
-        @include fill($pink);
+    &:hover {
+      background: transparentize($white, 0.9);
+      text-decoration: none;
     }
-    &.brand {
-        @include fill($purple);
+    &:active {
+      transform: scale(0.95, 0.95);
     }
-    &.secondary, &.info {
-        @include fill($blue);
+  }
+  &.big {
+    padding: 0.6875rem 1.375rem;
+    font-size: 0.875rem;
+  }
+  &.bigger {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+  }
+  &.biggest {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+  }
+
+  &.circular {
+    align-items: flex-start;
+    border-radius: 50%;
+    box-shadow: $gray8 0px 4px 9px 0px;
+    box-sizing: border-box;
+    height: calc(var(--layout-base) * 6);
+    line-height: calc(var(--layout-base) * 3);
+    overflow-wrap: break-word;
+    overflow: visible;
+    padding: 0px;
+    &.disabled,
+    &:disabled {
+      opacity: 0.8;
     }
-    &.danger {
-        @include fill($red);
-    }
-    &.dark {
-        @include fill($gray1);
-    }
-    &.success {
-        @include fill($green)
-    }
-    &.warning {
-        @include fill($yellow);
-    }
-    &.transparent {
-        background: none;
-        border: var(--border-width) solid transparent;
-        color: $white;
-        &:focus {
-            box-shadow: 0 0 0 calc(var(--layout-base)*.5) transparentize($white, .6);
-            outline: 0 none;
-        }
-        &:hover {
-            background: transparentize($white, .9);
-            text-decoration: none;
-        }
-    }
+    transition-delay: 0s, 0s, 0s, 0s, 0s;
+    transition-duration: 0.25s, 0.25s, 0.25s, 0.25s, 0.25s;
+    transition-property: transform, filter, opacity, -webkit-transform,
+      -webkit-filter;
+    transition-timing-function: ease, ease, ease, ease, ease;
+    user-select: none;
+    width: calc(var(--layout-base) * 6);
+    will-change: transform;
+    z-index: 0;
+    -webkit-appearance: none;
+    -webkit-user-drag: none;
     &.big {
-        padding: .6875rem 1.375rem;
-        font-size: .875rem;
+      height: calc(var(--layout-base) * 8);
+      padding: calc(var(--layout-base));
+      width: calc(var(--layout-base) * 8);
     }
-    &.bigger {
-        padding: .875rem 1.75rem;
-        font-size: 1rem;
+    img {
+      width: 100%;
+      height: auto;
     }
-    &.biggest {
-        padding: 1rem 2rem;
-        font-size: 1.25rem;
-    }
+  }
 }

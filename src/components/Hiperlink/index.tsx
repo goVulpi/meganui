@@ -12,7 +12,7 @@ import ClickableElement, {
 
 export interface HiperlinkProps extends ClickableElementProps {
   button?: boolean;
-  href: string;
+  href?: string;
   itemProp?: string;
   onClick?: ((event: React.MouseEvent<HTMLAnchorElement>) => void) | undefined;
   rel?: string;

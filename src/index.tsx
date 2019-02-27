@@ -31,6 +31,14 @@ import Text from './components/Text';
 import TextInput from './components/TextInput';
 import Toast from './components/Toast';
 
+/**
+ * Image icons
+ */
+import ImageIcon from './components/ImageIcon';
+import NoIcon from './components/ImageIcon/NoIcon'
+import YasssIcon from './components/ImageIcon/YasssIcon'
+import YesIcon from './components/ImageIcon/YesIcon'
+
 // export components as named exports
 export {
   AppContainer,
@@ -66,7 +74,14 @@ export {
   TelInput,
   Text,
   TextInput,
-  Toast
+  Toast,
+  /**
+   * Image icons
+   */
+  ImageIcon,
+  NoIcon,
+  YasssIcon,
+  YesIcon
 }
 
 // set a default export for this module
@@ -103,5 +118,12 @@ export default {
   TelInput,
   Text,
   TextInput,
-  Toast
+  Toast,
+  /**
+   * Image icons
+   */
+  ImageIcon,
+  NoIcon,
+  YasssIcon,
+  YesIcon
 }
