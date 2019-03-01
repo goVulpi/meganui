@@ -7,19 +7,28 @@ import * as PropTypes from "prop-types";
 import { colorPropValues, sizePropValues } from "../../constants";
 import styles from "./index.scss";
 
+/**
+ * Component properties por clickable element
+ */
 export interface ClickableElementProps {
   ariaLabel?: string;
   block?: boolean;
   circular?: boolean;
   color?: string;
+  id?: string;
   outlined?: boolean;
   size?: string;
   tooltipText: string;
 }
 
+/**
+ * HTML attributes for clickable element
+ */
 export interface ClickableElementAttributes {
   "aria-label"?: string;
   className?: string;
+  id?: string,
+  name?: string,
   tabIndex: number;
   title: string;
 }
@@ -39,6 +48,7 @@ export default class ClickableElement<
     block: PropTypes.bool,
     color: PropTypes.oneOf(colorPropValues),
     extraInfo: PropTypes.string,
+    id: PropTypes.string,
     onClick: PropTypes.func,
     outlined: PropTypes.bool,
     size: PropTypes.oneOf(sizePropValues),
@@ -71,10 +81,12 @@ export default class ClickableElement<
   }
 
   protected getAttributes(): ClickableElementAttributes {
-    const { ariaLabel, tooltipText } = this.props;
+    const { ariaLabel, id, tooltipText } = this.props;
     return {
       "aria-label": ariaLabel,
       className: this.getClassNames(),
+      id: id,
+      name: id,
       tabIndex: 0,
       title: tooltipText
     };

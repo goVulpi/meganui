@@ -41,6 +41,7 @@ export default class Hiperlink extends ClickableElement<HiperlinkProps> {
   static propTypes = Object.assign(ClickableElement.propTypes, {
     button: PropTypes.bool,
     href: PropTypes.string,
+    rel: PropTypes.string,
     to: PropTypes.string,
     urlParams: PropTypes.object,
     utmCampaign: PropTypes.string,
@@ -93,11 +94,12 @@ export default class Hiperlink extends ClickableElement<HiperlinkProps> {
   }
 
   protected getAttributes(): HiperlinkAttributes {
-    const { itemProp, target } = this.props;
+    const { itemProp, rel, target } = this.props;
 
     return Object.assign(super.getAttributes(), {
       href: this.getHrefAttribute(),
       itemProp: itemProp,
+      rel: rel,
       target: target
     });
   }
